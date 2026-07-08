@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Blink Beyond</title>
+  <meta name="description" content="Get in touch with Blink Beyond. Let's work together to build your brand and drive growth.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Blink Beyond | Digital Marketing Agency">
+  <meta property="og:description" content="Where brands blink and boom. Get in touch to build your brand and drive growth.">
+  <meta property="og:image" content="https://blinkbeyond.co.in/assets/og-image.jpg">
+  <meta property="og:url" content="https://blinkbeyond.co.in">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Device-Specific Enhancements (Separated to prevent cross-device layout impact) -->
+  <link rel="stylesheet" href="css/desktop/desktop.css">
+  <link rel="stylesheet" href="css/tablet/tablet.css">
+  <link rel="stylesheet" href="css/mobile/mobile.css">
+  <script>
+    (function() {
+      var hasCookie = document.cookie.split('; ').some(function(row) {
+        return row.indexOf('bb_loader_seen=') === 0;
+      });
+      if (hasCookie) {
+        document.documentElement.classList.add('loader-skip');
+      }
+      try {
+        if (sessionStorage.getItem('bb_page_transition') === '1') {
+          document.documentElement.classList.add('bb-entering');
+          document.documentElement.style.background = '#3D3DFF';
+          document.documentElement.style.backgroundColor = '#3D3DFF';
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="page-transition-overlay"></div>
+  <!-- ═══════════════ PAGE LOADER ═══════════════ -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-bg-glow"></div>
+    <div class="loader-center">
+      <div class="loader-wordmark-wrap">
+        <span class="loader-fill-ghost">BLINK BEYOND</span>
+        <span class="loader-fill-text" id="loader-fill-text">BLINK BEYOND</span>
+      </div>
+      <p class="loader-tagline">Where Brands Blink &amp; Boom</p>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-counter"><span id="loader-percent">0</span>%</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loader-bar-fill"></div></div>
+      <div class="loader-loading-text">[Loading...]</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="navbar" id="cardNav">
+    <div class="card-nav-top">
+      <button class="cn-hamburger" id="cnHamburger" aria-label="Open menu">
+        <span class="cn-line"></span>
+        <span class="cn-line"></span>
+        <span class="cn-label">MENU</span>
+      </button>
+      <a href="index.html" class="nav-logo" aria-label="Blink Beyond — Home"><img src="assets/logo.png" alt="Blink Beyond" class="nav-logo-img" width="130" height="31"></a>
+      <a href="contact.html" class="cn-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ FULLSCREEN MENU OVERLAY ═══════════════ -->
+  <div class="fullscreen-menu" id="fsMenu">
+    <div class="fs-menu-header">
+      <button class="fs-menu-close" id="fsMenuClose" aria-label="Close menu">
+        <span class="fs-close-icon">✕</span> CLOSE
+      </button>
+    </div>
+    <div class="fs-menu-body">
+      <div class="fs-menu-links">
+        <a href="index.html" class="fs-link" data-text="HOME">
+          <span class="text-roll-wrapper">
+            <span class="text-roll-top"></span>
+            <span class="text-roll-bottom"></span>
+          </span>
+        </a>
+        <a href="about.html" class="fs-link" data-text="ABOUT">
+          <span class="text-roll-wrapper">
+            <span class="text-roll-top"></span>
+            <span class="text-roll-bottom"></span>
+          </span>
+        </a>
+        <a href="services.html" class="fs-link" data-text="SERVICES">
+          <span class="text-roll-wrapper">
+            <span class="text-roll-top"></span>
+            <span class="text-roll-bottom"></span>
+          </span>
+        </a>
+        <a href="contact.html" class="fs-link" data-text="CONTACT">
+          <span class="text-roll-wrapper">
+            <span class="text-roll-top"></span>
+            <span class="text-roll-bottom"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="fs-menu-footer">
+      <div class="fs-tagline">Where Brands Blink & Boom</div>
+      <div class="fs-social-legal">
+        <div class="fs-socials">
+          <a href="#" class="fs-social-link">in</a>
+          <a href="#" class="fs-social-link">ig</a>
+          <a href="#" class="fs-social-link">be</a>
+        </div>
+        <div class="fs-legal">
+          <a href="#">/PRIVACY POLICY/</a>
+          <span>© BLINK BEYOND 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left side -->
+        <div class="contact-left reveal">
+          <h2>
+            LET'S WORK<br>
+            <span class="blue">TOGETHER</span>
+          </h2>
+          <p class="contact-tagline">RESULTS · GROWTH · CLARITY</p>
+        </div>
+        <!-- Right side — Form -->
+        <div class="contact-card reveal reveal-delay-2">
+          <h3>Tell us about your project</h3>
+          <p class="contact-intro">Share a few details and we will reply within 24-48 hours.</p>
+          <div id="formSuccessMessage" style="display: none; padding: 15px; margin-bottom: 20px; background-color: rgba(37, 211, 102, 0.1); color: #25D366; border: 1px solid #25D366; border-radius: 5px;">
+            Thanks! Your message is on the way. We will get back to you within 24-48 hours.
+          </div>
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_next" value="https://blinkbeyond.co.in/contact.html?success=true">
+            <input type="hidden" name="_subject" value="New inquiry from Blink Beyond website">
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="businessName">Business name (optional)</label>
+              <input type="text" id="businessName" name="businessName" placeholder="Your brand or company">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Goals, timeline, and any links we should review."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send message</button>
+          </form>
+          <script>
+            if (window.location.search.includes('success=true')) {
+              document.getElementById('formSuccessMessage').style.display = 'block';
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="site-footer">
+    <div class="lamp" id="footer-lamp">
+      <div class="lamp__glow"></div>
+      <div class="lamp__line"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-cta-strip">
+        <div class="container footer-cta-inner">
+          <p class="footer-cta-text">Ready to grow your brand?</p>
+          <a href="contact.html" class="footer-cta-btn">Let's Talk <span>→</span></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-about">
+            <div class="footer-logo"><img src="assets/logo.png" alt="Blink Beyond" class="footer-logo-img" width="160" height="38"></div>
+            <p class="footer-tagline">Where brands blink and boom. We craft digital experiences that drive real growth.</p>
+            <div class="footer-social-links">
+              <a href="https://instagram.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/blinkbeyond" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://facebook.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://wa.me/919545556009" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              </a>
+            </div>
+            <div class="footer-msme">
+              <img src="assets/msme-badge.svg" alt="MSME Registered Enterprise" class="footer-msme-logo" width="44" height="44">
+              <div class="footer-msme-info">
+                <span class="footer-msme-label">MSME Registered Enterprise</span>
+                <span class="footer-msme-gstin">GSTIN: 27AABCU1234A1Z5</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col footer-links-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col footer-services-col">
+            <h4 class="footer-col-title">Services</h4>
+            <a href="services.html">Social Media Marketing</a>
+            <a href="services.html">Performance Marketing</a>
+            <a href="services.html">Web Development</a>
+            <a href="services.html">UI/UX Design</a>
+            <a href="services.html">Content Creation</a>
+            <a href="services.html">Brand Strategy</a>
+          </div>
+          <div class="footer-col footer-contact-col">
+            <h4 class="footer-col-title">Get In Touch</h4>
+            <p><span class="footer-contact-label">Address</span>Palghar - 401404,<br>Mumbai-Maharashtra.</p>
+            <p><span class="footer-contact-label">Phone</span><a href="tel:+919545556009">+91 95455 56009</a></p>
+            <p><span class="footer-contact-label">Email</span><a href="mailto:support@blinkbeyond.co.in">support@blinkbeyond.co.in</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-brand-wrap" id="footer-brand-wrap">
+        <span class="footer-brand-text" aria-hidden="true">BLINK BEYOND</span>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 Blink Beyond. All rights reserved.</p>
+          <p class="footer-bottom-legal"><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/scrolltrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  
+  <!-- ═══════════════ FLOATING ACTION BUTTONS ═══════════════ -->
+  <div class="fab-container">
+    <div class="fab-options">
+      <!-- WhatsApp Option -->
+      <a href="https://wa.me/919545556009" target="_blank" rel="noopener" class="fab-option whatsapp-btn" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+      </a>
+    </div>
+    <!-- Main Toggle Button -->
+    <button class="fab-toggle" aria-label="Open Actions">
+      <svg class="icon-chat" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 8V4H8"/>
+        <rect width="16" height="12" x="4" y="8" rx="2"/>
+        <path d="M2 14h2"/>
+        <path d="M20 14h2"/>
+        <path d="M15 13v2"/>
+        <path d="M9 13v2"/>
+      </svg>
+      <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+</body>
+</html>
