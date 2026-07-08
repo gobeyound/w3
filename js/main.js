@@ -1705,15 +1705,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (homePlayCircle) homePlayCircle.style.opacity = '0';
         homeCard.style.cursor = 'default';
         startProgress();
-        // Hide navbar, strip and FAB for immersive video
-        try {
-          const navbarEl = document.querySelector('.navbar');
-          if (navbarEl) { navbarEl.classList.add('bb-video-hidden'); navbarEl.setAttribute('aria-hidden', 'true'); }
-          const strip = document.querySelector('.announcement-strip');
-          if (strip) gsap.to(strip, { opacity: 0, duration: 0.25, pointerEvents: 'none' });
-          const fab = document.querySelector('.fab-container');
-          if (fab) gsap.to(fab, { opacity: 0, scale: 0.8, duration: 0.2, pointerEvents: 'none' });
-        } catch(e) {}
+        hideImmersiveUI();
       }
     } else {
       if (isFS) {
@@ -1722,17 +1714,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (homePlayCircle) homePlayCircle.style.opacity = '1';
         homeCard.style.cursor = 'pointer';
         stopProgress();
-        // Restore navbar, strip and FAB
-        try {
-          const navbarEl = document.querySelector('.navbar');
-          if (navbarEl) { navbarEl.classList.remove('bb-video-hidden'); navbarEl.removeAttribute('aria-hidden'); }
-          const strip = document.querySelector('.announcement-strip');
-          if (strip) gsap.to(strip, { opacity: 1, duration: 0.3, clearProps: 'pointerEvents' });
-          const fab = document.querySelector('.fab-container');
-          if (fab) gsap.to(fab, { opacity: 1, scale: 1, duration: 0.25, clearProps: 'pointerEvents' });
-        } catch(e) {}
+        showImmersiveUI();
       }
     }
+  }
+
+  function hideImmersiveUI() {
+    try {
+      const navbarEl = document.querySelector('.navbar');
+      if (navbarEl) { navbarEl.classList.add('bb-video-hidden'); navbarEl.setAttribute('aria-hidden', 'true'); }
+      const strip = document.querySelector('.announcement-strip');
+      if (strip) gsap.to(strip, { opacity: 0, duration: 0.25, pointerEvents: 'none' });
+      const fab = document.querySelector('.fab-container');
+      if (fab) gsap.to(fab, { opacity: 0, scale: 0.8, duration: 0.2, pointerEvents: 'none' });
+      const agentBtn = document.getElementById('ai-agent-btn');
+      if (agentBtn) gsap.to(agentBtn, { opacity: 0, scale: 0.8, duration: 0.2, pointerEvents: 'none' });
+    } catch(e) {}
+  }
+
+  function showImmersiveUI() {
+    try {
+      const navbarEl = document.querySelector('.navbar');
+      if (navbarEl) { navbarEl.classList.remove('bb-video-hidden'); navbarEl.removeAttribute('aria-hidden'); }
+      const strip = document.querySelector('.announcement-strip');
+      if (strip) gsap.to(strip, { opacity: 1, duration: 0.3, clearProps: 'pointerEvents' });
+      const fab = document.querySelector('.fab-container');
+      if (fab) gsap.to(fab, { opacity: 1, scale: 1, duration: 0.25, clearProps: 'pointerEvents' });
+      const agentBtn = document.getElementById('ai-agent-btn');
+      if (agentBtn) gsap.to(agentBtn, { opacity: 1, scale: 1, duration: 0.25, clearProps: 'pointerEvents' });
+    } catch(e) {}
   }
 
   function startProgress() {
@@ -1769,6 +1779,18 @@ document.addEventListener('DOMContentLoaded', () => {
       onUpdate: self => {
         targetProg = self.progress;
         if (!rafId) rafId = requestAnimationFrame(smoothStep);
+      },
+      onLeave: () => {
+        showImmersiveUI();
+      },
+      onLeaveBack: () => {
+        showImmersiveUI();
+      },
+      onEnter: () => {
+        if (isFS) hideImmersiveUI();
+      },
+      onEnterBack: () => {
+        if (isFS) hideImmersiveUI();
       }
     });
   }
@@ -1797,6 +1819,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     homePlayBtn.addEventListener('mouseleave', () => {
       if (scrollProg < 0.05) homeCard.style.transform = 'scale(1)';
+    });
+    // Scroll page smoothly to expand and play the video
+    homePlayBtn.addEventListener('click', () => {
+      const targetY = homeSection.getBoundingClientRect().top + window.scrollY + 600;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
     });
   }
 });
@@ -1890,13 +1917,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (aboutPlayCircle) aboutPlayCircle.style.opacity = '0';
         aboutCard.style.cursor = 'default';
         startProgress();
-        // hide navbar for immersive video
-        try {
-          if (typeof navbarEl !== 'undefined' && navbarEl) {
-            navbarEl.classList.add('bb-video-hidden');
-            navbarEl.setAttribute('aria-hidden', 'true');
-          }
-        } catch (e) {}
+        hideImmersiveUI();
       }
     } else {
       if (isFS) {
@@ -1905,15 +1926,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (aboutPlayCircle) aboutPlayCircle.style.opacity = '1';
         aboutCard.style.cursor = 'pointer';
         stopProgress();
-        // restore navbar when exiting immersive video
-        try {
-          if (typeof navbarEl !== 'undefined' && navbarEl) {
-            navbarEl.classList.remove('bb-video-hidden');
-            navbarEl.removeAttribute('aria-hidden');
-          }
-        } catch (e) {}
+        showImmersiveUI();
       }
     }
+  }
+
+  function hideImmersiveUI() {
+    try {
+      const navbarEl = document.querySelector('.navbar');
+      if (navbarEl) { navbarEl.classList.add('bb-video-hidden'); navbarEl.setAttribute('aria-hidden', 'true'); }
+      const strip = document.querySelector('.announcement-strip');
+      if (strip) gsap.to(strip, { opacity: 0, duration: 0.25, pointerEvents: 'none' });
+      const fab = document.querySelector('.fab-container');
+      if (fab) gsap.to(fab, { opacity: 0, scale: 0.8, duration: 0.2, pointerEvents: 'none' });
+      const agentBtn = document.getElementById('ai-agent-btn');
+      if (agentBtn) gsap.to(agentBtn, { opacity: 0, scale: 0.8, duration: 0.2, pointerEvents: 'none' });
+    } catch(e) {}
+  }
+
+  function showImmersiveUI() {
+    try {
+      const navbarEl = document.querySelector('.navbar');
+      if (navbarEl) { navbarEl.classList.remove('bb-video-hidden'); navbarEl.removeAttribute('aria-hidden'); }
+      const strip = document.querySelector('.announcement-strip');
+      if (strip) gsap.to(strip, { opacity: 1, duration: 0.3, clearProps: 'pointerEvents' });
+      const fab = document.querySelector('.fab-container');
+      if (fab) gsap.to(fab, { opacity: 1, scale: 1, duration: 0.25, clearProps: 'pointerEvents' });
+      const agentBtn = document.getElementById('ai-agent-btn');
+      if (agentBtn) gsap.to(agentBtn, { opacity: 1, scale: 1, duration: 0.25, clearProps: 'pointerEvents' });
+    } catch(e) {}
   }
 
   function startProgress() {
@@ -1950,6 +1991,18 @@ document.addEventListener('DOMContentLoaded', () => {
       onUpdate: self => {
         targetProg = self.progress;
         if (!rafId) rafId = requestAnimationFrame(smoothStep);
+      },
+      onLeave: () => {
+        showImmersiveUI();
+      },
+      onLeaveBack: () => {
+        showImmersiveUI();
+      },
+      onEnter: () => {
+        if (isFS) hideImmersiveUI();
+      },
+      onEnterBack: () => {
+        if (isFS) hideImmersiveUI();
       }
     });
   }
@@ -1978,6 +2031,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     aboutPlayBtn.addEventListener('mouseleave', () => {
       if (scrollProg < 0.05) aboutCard.style.transform = 'scale(1)';
+    });
+    // Scroll page smoothly to expand and play the video
+    aboutPlayBtn.addEventListener('click', () => {
+      const targetY = aboutSection.getBoundingClientRect().top + window.scrollY + 600;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
     });
   }
 

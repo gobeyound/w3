@@ -378,5 +378,27 @@
     font-size: clamp(9px, 1.2vw, 11px) !important;
     padding: 12px 10px 8px !important;
   }
+
+  /* Video and play button adjustments for tablet view to be perfectly proportional and clickable */
+  #home-card-anchor,
+  #about-card-anchor {
+    width: clamp(200px, 20vw, 240px) !important;
+    height: clamp(130px, 14vw, 160px) !important;
+  }
+  
+  .about-play-btn {
+    gap: clamp(32px, 4.5vw, 56px) !important;
+  }
+
+  #home-reel-section {
+    margin-top: 32vh !important;
+    gap: 48px !important;
+  }
+
+  .arc-hero-para {
+    font-size: clamp(14px, 1.8vw, 18px) !important;
+    max-width: 680px !important;
+    line-height: 1.5 !important;
+  }
 }
 
