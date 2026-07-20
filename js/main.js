@@ -252,6 +252,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.fs-link');
     if (!menu || !btn || !closeBtn) return;
 
+    // Dynamically insert logo on the left of .fs-menu-header
+    const menuHeader = menu.querySelector('.fs-menu-header');
+    if (menuHeader && !menuHeader.querySelector('.fs-menu-logo')) {
+      const logoContainer = document.createElement('a');
+      logoContainer.href = 'index.html';
+      logoContainer.className = 'fs-menu-logo';
+      logoContainer.innerHTML = '<img src="assets/logo.png" alt="Blink Beyond" class="fs-menu-logo-img" width="130" height="31">';
+      menuHeader.insertBefore(logoContainer, menuHeader.firstChild);
+    }
+
+    // Identify and highlight active link automatically
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split("/").pop() || "index.html";
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === pageName || (pageName === "index.html" && href === "/") || (pageName === "" && href === "index.html")) {
+        link.classList.add('is-active');
+      }
+    });
+
     // Split text into spans for the text roll effect
     links.forEach(link => {
       const text = link.getAttribute('data-text');
@@ -305,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let tl = gsap.timeline({ paused: true })
       .set(menu, { visibility: 'visible' })
       .to(menu, { y: '0%', duration: 0.7, ease: 'power3.inOut' })
-      .from(links, { y: 60, opacity: 0, duration: 0.5, stagger: 0.06, ease: 'power3.out' }, '-=0.2')
+      .from(links, { y: 45, opacity: 0, duration: 0.5, stagger: 0.05, ease: 'power3.out' }, '-=0.3')
       .from('.fs-menu-footer', { opacity: 0, y: 20, duration: 0.4, ease: 'power2.out' }, '-=0.3');
 
     const agentBtn = document.getElementById('ai-agent-btn');
@@ -1391,14 +1411,23 @@ window.addEventListener('load', () => {
       const ringRadius = arcRing.offsetWidth / 2;
       if (!ringRadius) return;
 
+      const isMobile = window.innerWidth < 768;
+      const isTablet = window.innerWidth >= 768 && window.innerWidth <= 1024;
+      const defaultW = isMobile ? 230 : (isTablet ? 260 : 300);
+      const defaultH = isMobile ? 160 : (isTablet ? 190 : 220);
+
       allCards.forEach((card, i) => {
         const angleDeg = -170 + stepDeg * i;       // start at -170° and go full circle
         const angleRad = angleDeg * (Math.PI / 180);
         const cx = ringRadius + ringRadius * Math.cos(angleRad);
         const cy = ringRadius + ringRadius * Math.sin(angleRad);
+
+        const cardW = card.offsetWidth || defaultW;
+        const cardH = card.offsetHeight || defaultH;
+
         gsap.set(card, {
-          left:            cx - card.offsetWidth  / 2,
-          top:             cy - card.offsetHeight / 2,
+          left:            cx - cardW  / 2,
+          top:             cy - cardH / 2,
           rotation:        angleDeg + 90,
           transformOrigin: 'center center',
           force3D:         true,
@@ -1409,6 +1438,20 @@ window.addEventListener('load', () => {
 
     // Run layout initially
     layoutCards();
+
+    // Use ResizeObserver for perfect, robust responsiveness in all sandboxed environments / preview containers
+    if (typeof ResizeObserver !== 'undefined') {
+      const ro = new ResizeObserver(() => {
+        layoutCards();
+      });
+      ro.observe(arcRing);
+    }
+
+    // Safety timeouts to handle slow/deferred layouts, Webfont loading, or screen imports
+    setTimeout(layoutCards, 100);
+    setTimeout(layoutCards, 400);
+    setTimeout(layoutCards, 1000);
+    setTimeout(layoutCards, 2000);
 
     // Re-calculate layout on window resize to ensure full responsiveness across screens (like tablet)
     window.addEventListener('resize', layoutCards);

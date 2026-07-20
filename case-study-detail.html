@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study Details — Blink Beyond</title>
+  <meta name="description" content="Read our detailed case studies to see how we help high-growth companies build, scale, and design market-defining products.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Blink Beyond | Case Study Details">
+  <meta property="og:description" content="See how we have helped our clients grow, scale, and define their categories.">
+  <meta property="og:image" content="https://blinkbeyond.co.in/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <script>
+    (function() {
+      var seen = false;
+      try {
+        seen = localStorage.getItem('bb_loader_seen') === '1';
+      } catch (e) {}
+      if (!seen && /(?:^|; )bb_loader_seen=1/.test(document.cookie)) {
+        seen = true;
+      }
+      if (seen) {
+        document.documentElement.classList.add('bb-loader-skip');
+      }
+      try {
+        if (sessionStorage.getItem('bb_page_transition') === '1') {
+          document.documentElement.classList.add('bb-entering');
+          document.documentElement.style.background = '#3D3DFF';
+          document.documentElement.style.backgroundColor = '#3D3DFF';
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop/desktop.css">
+  <link rel="stylesheet" href="css/tablet/tablet.css">
+  <link rel="stylesheet" href="css/mobile/mobile.css">
+
+  <style>
+    /* ═══════════════ DETAILED CASE STUDY PREMIUM STYLING ═══════════════ */
+    :root {
+      --case-accent-color: #3D3DFF;
+      --case-text-muted: #666666;
+      --case-bg-gray: #F5F5F7;
+      --case-border: rgba(0, 0, 0, 0.07);
+      --transition-standard: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      background: #FFFFFF;
+      color: var(--black);
+    }
+
+    /* Back Button Navigation */
+    .back-btn-container {
+      margin-bottom: 32px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--black);
+      text-decoration: none;
+      transition: var(--transition-standard);
+      cursor: pointer;
+    }
+
+    .back-btn span {
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: var(--case-accent-color);
+    }
+
+    .back-btn:hover span {
+      transform: translateX(-4px);
+    }
+
+    /* Elegant Hero Section */
+    .case-detail-hero {
+      background: var(--case-bg-gray);
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-height) + 40px) 24px 80px;
+      border-bottom: 1px solid var(--case-border);
+    }
+
+    .case-detail-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1400px;
+      height: 100%;
+      background: radial-gradient(circle at 50% 10%, rgba(61, 61, 255, 0.03) 0%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .detail-category-badge {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--case-accent-color);
+      background: rgba(61, 61, 255, 0.06);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(61, 61, 255, 0.08);
+    }
+
+    .logo-container-hero {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--black);
+      border: 1px solid var(--case-border);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    /* Specific client logo styling matching the index.html/case-studies.html branding */
+    .case-logo--databricks { background: #FF3621; color: #fff; }
+    .case-logo--interhuman { background: #3B82F6; color: #fff; }
+    .case-logo--neon { background: #00E699; color: #000; }
+    .case-logo--polarsignals { background: #EAB308; color: #000; }
+    .case-logo--railway { background: #F43F5E; color: #fff; }
+    .case-logo--unkey { background: #10B981; color: #fff; }
+    .case-logo--blackforest { background: #8B5CF6; color: #fff; }
+    .case-logo--cluely { background: #EC4899; color: #fff; }
+    .case-logo--harness { background: #0EA5E9; color: #fff; }
+    .case-logo--huly { background: #6366F1; color: #fff; }
+    .case-logo--slash { background: #14B8A6; color: #fff; }
+    .case-logo--invertase { background: #F97316; color: #fff; }
+    .case-logo--searchparty { background: #3D3DFF; color: #fff; }
+    .case-logo--gitness { background: #A855F7; color: #fff; }
+    .case-logo--vantage { background: #EF4444; color: #fff; }
+    .case-logo--novu { background: #F59E0B; color: #fff; }
+    .case-logo--terzo { background: #10B981; color: #fff; }
+    .case-logo--revenuecat { background: #F43F5E; color: #fff; }
+
+    .case-detail-title {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 6vw, 76px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 18px;
+    }
+
+    .case-detail-tagline {
+      font-family: var(--font-body);
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--case-text-muted);
+      max-width: 800px;
+    }
+
+    /* Content Layout styling */
+    .case-detail-body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 991px) {
+      .case-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+    }
+
+    /* Left Column (Main Narratives) */
+    .case-main-narrative {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .narrative-section h2 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .narrative-p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      color: #333333;
+      margin-bottom: 24px;
+    }
+
+    .narrative-p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Quote Block Design */
+    .case-quote-wrapper {
+      background: var(--case-bg-gray);
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid var(--case-border);
+      position: relative;
+    }
+
+    .case-quote-wrapper::before {
+      content: '“';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 80px;
+      color: rgba(61, 61, 255, 0.07);
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+
+    .case-quote-body {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.65;
+      color: #333333;
+      font-style: italic;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .case-quote-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quote-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--case-accent-color);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .quote-meta-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quote-author-name {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .quote-author-role {
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: var(--case-text-muted);
+    }
+
+    /* Key Results Block styling */
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .result-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #FAFAFB;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--case-border);
+      transition: var(--transition-standard);
+    }
+
+    .result-item:hover {
+      border-color: rgba(61, 61, 255, 0.15);
+      transform: translateX(4px);
+    }
+
+    .result-icon {
+      width: 24px;
+      height: 24px;
+      background: rgba(61, 61, 255, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--case-accent-color);
+      font-weight: 800;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .result-text {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* Right Column (Sticky Sidebar) */
+    .case-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 40px);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media (max-width: 991px) {
+      .case-sidebar {
+        position: static;
+      }
+    }
+
+    .sidebar-widget {
+      background: #FFFFFF;
+      border: 1px solid var(--case-border);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    }
+
+    .widget-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--case-text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Custom Branded Button */
+    .visit-project-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--black);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: var(--transition-standard);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .visit-project-cta:hover {
+      background: var(--case-accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(61, 61, 255, 0.2);
+    }
+
+    .visit-project-cta span {
+      transition: transform 0.3s ease;
+    }
+
+    .visit-project-cta:hover span {
+      transform: translateX(4px);
+    }
+
+    /* Tag Lists styling */
+    .meta-tags-container {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .meta-tag-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .meta-group-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--case-text-muted);
+    }
+
+    .tags-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .case-tag {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--black);
+      background: var(--case-bg-gray);
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    /* Browse Section (Footer Nav) */
+    .case-detail-browse {
+      background: var(--case-bg-gray);
+      border-top: 1px solid var(--case-border);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .browse-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .browse-label {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--case-accent-color);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .next-case-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 28px;
+    }
+
+    .next-case-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--black);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: var(--transition-standard);
+    }
+
+    .next-case-cta:hover {
+      background: var(--case-accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(61, 61, 255, 0.15);
+    }
+
+    .next-case-cta span {
+      transition: transform 0.3s ease;
+    }
+
+    .next-case-cta:hover span {
+      transform: translateX(4px);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page-transition-overlay"></div>
+  
+  <!-- ═══════════════ PAGE LOADER ═══════════════ -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-bg-glow"></div>
+    <div class="loader-center">
+      <div class="loader-wordmark-wrap">
+        <span class="loader-fill-ghost">BLINK BEYOND</span>
+        <span class="loader-fill-text" id="loader-fill-text">BLINK BEYOND</span>
+      </div>
+      <p class="loader-tagline">Where Brands Blink &amp; Boom</p>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-counter" id="loader-percent" data-value="0%">0%</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <div class="loader-loading-text">Loading</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="navbar" id="cardNav">
+    <div class="card-nav-top">
+      <button class="cn-hamburger" id="cnHamburger" aria-label="Open menu">
+        <span class="cn-line"></span>
+        <span class="cn-line"></span>
+        <span class="cn-label">MENU</span>
+      </button>
+      <a href="index.html" class="nav-logo" aria-label="Blink Beyond — Home"><img src="assets/logo.png" alt="Blink Beyond" class="nav-logo-img" width="130" height="31"></a>
+      <a href="contact.html" class="cn-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ FULLSCREEN MENU OVERLAY ═══════════════ -->
+  <div class="fullscreen-menu" id="fsMenu">
+    <div class="fs-menu-header">
+      <span class="fs-menu-tagline">Where Brands Blink &amp; Boom</span>
+      <button class="fs-menu-close" id="fsMenuClose" aria-label="Close menu">
+        <span class="fs-close-icon">✕</span> CLOSE
+      </button>
+    </div>
+    <div class="fs-menu-body">
+      <div class="fs-menu-links">
+        <a href="index.html" class="fs-link" data-text="HOME">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="about.html" class="fs-link" data-text="ABOUT">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="services.html" class="fs-link" data-text="SERVICES">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="case-studies.html" class="fs-link" data-text="CASES">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="contact.html" class="fs-link" data-text="CONTACT">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+      </div>
+    </div>
+    <div class="fs-menu-footer">
+      <div class="fs-footer-left">© BLINK BEYOND 2026 — ALL RIGHTS RESERVED</div>
+      <div class="fs-social-legal">
+        <div class="fs-socials">
+          <a href="#" class="fs-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="fs-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+        <div class="fs-menu-legal-links">
+          <a href="#" class="fs-legal-link">PRIVACY POLICY</a>
+          <a href="#" class="fs-legal-link">TERMS OF SERVICE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Details Section -->
+  <section class="case-detail-hero">
+    <div class="hero-container">
+      <!-- Back Navigation link -->
+      <div class="back-btn-container">
+        <a href="case-studies.html" class="back-btn"><span>←</span> Back to Cases</a>
+      </div>
+      <div class="hero-meta">
+        <span class="detail-category-badge" id="case-hero-category">Category</span>
+        <div class="logo-container-hero" id="case-hero-logo">Db</div>
+      </div>
+      <h1 class="case-detail-title" id="case-hero-title">Databricks</h1>
+      <p class="case-detail-tagline" id="case-hero-tagline">Tagline of the project</p>
+    </div>
+  </section>
+
+  <!-- Detailed Content Grid -->
+  <section class="case-detail-content">
+    <div class="case-detail-body">
+      <div class="case-detail-grid">
+        
+        <!-- Main Narrative Column -->
+        <div class="case-main-narrative">
+          
+          <!-- About Section -->
+          <div class="narrative-section" id="section-about">
+            <h2>About the Project</h2>
+            <div id="case-about-paragraphs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Quote Block (Only visible if database includes quote data) -->
+          <div class="case-quote-wrapper" id="case-quote-wrapper" style="display: none;">
+            <p class="case-quote-body" id="case-quote-text">"Testimonial text goes here..."</p>
+            <div class="case-quote-profile">
+              <div class="quote-avatar" id="case-quote-avatar">SK</div>
+              <div class="quote-meta-info">
+                <span class="quote-author-name" id="case-quote-name">Stas Kelvich</span>
+                <span class="quote-author-role" id="case-quote-role">Co-Founder, Neon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Section -->
+          <div class="narrative-section" id="section-results">
+            <h2>Key Results &amp; Outcomes</h2>
+            <div class="results-list" id="case-results-list">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar / Widget Column -->
+        <div class="case-sidebar">
+          
+          <!-- CTA Widget -->
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Project Deliverables</h3>
+            
+            <a href="#" target="_blank" rel="noopener" class="visit-project-cta" id="case-visit-cta">
+              Visit Website <span>→</span>
+            </a>
+
+            <!-- Provided services and tech tags -->
+            <div class="meta-tags-container">
+              
+              <div class="meta-tag-group">
+                <span class="meta-group-label">Provided Services</span>
+                <div class="tags-flex" id="case-services-tags">
+                  <!-- Dynamic tags -->
+                </div>
+              </div>
+
+              <div class="meta-tag-group">
+                <span class="meta-group-label">Technology Stack</span>
+                <div class="tags-flex" id="case-tech-tags">
+                  <!-- Dynamic tags -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BROWSE / NEXT CASE STUDY ═══════════════ -->
+  <section class="case-detail-browse">
+    <div class="browse-container">
+      <span class="browse-label">Up Next</span>
+      <h2 class="next-case-title" id="next-case-name">Next Case</h2>
+      <a href="#" class="next-case-cta" id="next-case-link">Read Next Case <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="site-footer">
+    <div class="lamp" id="footer-lamp">
+      <div class="lamp__glow"></div>
+      <div class="lamp__line"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-cta-strip">
+        <div class="container footer-cta-inner">
+          <p class="footer-cta-text">Ready to grow your brand?</p>
+          <a href="contact.html" class="footer-cta-btn">Let's Talk <span>→</span></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-about">
+            <div class="footer-logo"><img src="assets/logo.png" alt="Blink Beyond" class="footer-logo-img" width="160" height="38"></div>
+            <p class="footer-tagline">Where brands blink and boom. We craft digital experiences that drive real growth.</p>
+            <div class="footer-social-links">
+              <a href="https://instagram.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/blinkbeyond" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://facebook.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://wa.me/919545556009" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              </a>
+            </div>
+            <div class="footer-msme">
+              <img src="assets/msme-badge.svg" alt="MSME Registered Enterprise" class="footer-msme-logo" width="44" height="44">
+              <div class="footer-msme-info">
+                <span class="footer-msme-label">MSME Registered Enterprise</span>
+                <span class="footer-msme-gstin">GSTIN: 27AABCU1234A1Z5</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col footer-links-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col footer-services-col">
+            <h4 class="footer-col-title">Services</h4>
+            <a href="services.html">Social Media Marketing</a>
+            <a href="services.html">Performance Marketing</a>
+            <a href="services.html">Web Development</a>
+            <a href="services.html">UI/UX Design</a>
+            <a href="services.html">Content Creation</a>
+            <a href="services.html">Brand Strategy</a>
+          </div>
+          <div class="footer-col footer-contact-col">
+            <h4 class="footer-col-title">Get In Touch</h4>
+            <p><span class="footer-contact-label">Address</span>Palghar - 401404,<br>Mumbai-Maharashtra.</p>
+            <p><span class="footer-contact-label">Phone</span><a href="tel:+919545556009">+91 95455 56009</a></p>
+            <p><span class="footer-contact-label">Email</span><a href="mailto:support@blinkbeyond.co.in">support@blinkbeyond.co.in</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-brand-wrap" id="footer-brand-wrap">
+        <span class="footer-brand-text" aria-hidden="true">BLINK BEYOND</span>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 Blink Beyond. All rights reserved.</p>
+          <p class="footer-bottom-legal"><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/scrolltrigger.min.js"></script>
+  <script src="js/vendor/draggable.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- CASE STUDY DATA & INJECTION SCRIPT -->
+  <script>
+    // Comprehensive Case Studies Database
+    const caseStudiesDb = {
+      "databricks": {
+        title: "Databricks",
+        tagline: "Developer hub for the data and AI company",
+        category: "Web Development",
+        logoText: "Db",
+        logoClass: "case-logo--databricks",
+        about: [
+          "Databricks is the data and AI company behind the Data Intelligence Platform, used by thousands of organizations worldwide to build, deploy, and govern data and AI applications. In 2025, Databricks acquired Neon, the serverless Postgres company, in a landmark deal aimed at helping developers ship AI systems faster.",
+          "That acquisition is how our collaboration began. We had partnered with Neon since day one in 2021 — through several brand evolutions, a Series B, and ultimately the Databricks deal — and the relationship carried straight through: shortly after the acquisition, the Databricks team brought us in for our first project together, the new Databricks Developer Hub.",
+          "The Developer Hub is built for the agentic era. Its promise — build agentic applications in minutes, not months — lets developers copy a single prompt into Cursor, Claude Code, or any coding agent and get walked through building a complete app on Databricks, backed by a library of ready-to-use templates for Lakebase, Model Serving, and AI Gateway. Our challenge was to make that speed felt, not just claimed. We designed custom interactive animations for the experience, including a hero sequence that plays out the entire journey — from prompt to scaffolding to a live, deployed app — before the visitor even scrolls.",
+          "Working with a company of Databricks' scale on a developer-first product is exactly where we do our best work, and we're excited about where this partnership goes next. From a seed-stage Neon in 2021 to Databricks today, it's a collaboration we're proud to have earned twice over."
+        ],
+        services: ["Brand Identity", "Motion Design", "Web Design", "Illustrations", "Web Development"],
+        tech: ["React", "TypeScript", "Docusaurus", "MDX", "Vercel"],
+        results: [
+          "Designed and built the Databricks Developer Hub for the agentic development era",
+          "Created custom interactive animations that demonstrate the prompt-to-deployed-app journey",
+          "Continued a five-year client relationship through a $1B acquisition — from Neon to Databricks"
+        ],
+        websiteUrl: "https://databricks.com"
+      },
+      "interhuman": {
+        title: "Interhuman AI",
+        tagline: "The social intelligence layer for AI",
+        category: "Social Media Marketing",
+        logoText: "Ih",
+        logoClass: "case-logo--interhuman",
+        about: [
+          "Interhuman AI is building the social intelligence layer for AI to let machines read the human communication that happens beyond words. Their mission is to unlock complete human-AI emotional resonance.",
+          "For the launch of Inter-1, their omni-modal model detecting social signals from video, audio, and text, they wanted to make a bold impact that truly explained their technology's potential.",
+          "We produced an ultra-creative product campaign video that shows what it means for AI to finally read the room. The video walks through real-world scenarios — showing how microscopic shifts in pitch, facial micro-expressions, and speech pacing tell a story that text alone completely misses.",
+          "The campaign also included a dark, high-contrast, immersive landing page with custom motion effects that reacted as users hovered over different interactive signal blocks, giving them a physical feel of social intelligence."
+        ],
+        services: ["Creative Direction", "Video Production", "Sound Design", "Interactive Web Design", "Campaign Strategy"],
+        tech: ["Premiere Pro", "After Effects", "Cinema 4D", "Framer Motion", "Tailwind CSS"],
+        results: [
+          "Produced the official launch video, gaining over 500,000 views in the first week",
+          "Engineered an interactive dashboard mockup to let visitors test social signal detection in real time",
+          "Helped build waitlist momentum, yielding 25k+ high-intent registrations before general availability"
+        ],
+        websiteUrl: "https://interhuman.ai"
+      },
+      "neon": {
+        title: "Neon",
+        tagline: "Open Source serverless Postgres",
+        category: "Web Development",
+        logoText: "Ne",
+        logoClass: "case-logo--neon",
+        about: [
+          "Neon is an open-source serverless Postgres database designed for modern developer needs. By separating storage and compute, Neon enables database branching (just like git), instant autoscaling, and infinite storage capacity on demand.",
+          "We partnered with Neon since day one in 2021 — through several brand evolutions, a Series B, and ultimately their acquisition by Databricks in 2025. We translated their high-tech product features into a scalable branding system and created tailored, high-fidelity developer dashboards.",
+          "Our collaboration operated without bureaucracy. By integrating as a direct extension of Neon's dev and product teams, we delivered fast-paced marketing sites, dashboard interfaces, and interactive technical graphics that helped developers understand serverless database branching in seconds."
+        ],
+        quote: {
+          text: "While building a developer-oriented product, we struggled to explain our needs to design agencies until we started with Blink Beyond. Unlike others, Blink Beyond quickly understood our product and target audience. Blink Beyond delivered exceptional results in a short timeframe and became an extension of our dev and product teams, contributing to many areas without any communication bureaucracy.",
+          author: "Stas Kelvich",
+          role: "Co-Founder, Neon",
+          avatar: "SK"
+        },
+        services: ["Brand Strategy", "UI & UX Design", "Developer Dashboard Layouts", "Branding Guidelines", "Motion Graphics"],
+        tech: ["Next.js", "React", "TypeScript", "D3.js", "PostgreSQL", "Tailwind CSS"],
+        results: [
+          "Crafted a cohesive, highly technical developer-focused branding system from scratch",
+          "Engineered a dynamic database branching interactive graphic representing 10,000+ branches",
+          "Secured a highly successful developer acquisition flow, culminating in the Databricks transaction"
+        ],
+        websiteUrl: "https://neon.tech"
+      },
+      "polarsignals": {
+        title: "Polar Signals",
+        tagline: "Always-on continuous profiling for CPU, GPU, and memory",
+        category: "Web Development",
+        logoText: "Ps",
+        logoClass: "case-logo--polarsignals",
+        about: [
+          "Polar Signals is at the cutting edge of continuous profiling. Using eBPF, their flagship Parca platform profiles CPU, GPU, memory, and IO usage down to the line of code without needing to restart services or install heavy agent software.",
+          "We completely redesigned their marketing site and established structured components to showcase complex flamegraphs effortlessly. Since their product is extremely technical, we focused on architectural clarity, deep terminal contrasts, and sleek SVG-driven interactive charts.",
+          "The redesign allowed Frederic and the team to confidently present their product to enterprise buyers, presenting deep continuous tracing and profiling data in an executive-ready, premium presentation style."
+        ],
+        quote: {
+          text: "We shipped features for years but neglected our website presence. Blink Beyond has been an awesome partner to help us now keep it up to date. I particularly enjoy that the team is very technical so it has been a breeze working with them without us having to explain much. I also enjoyed that we could leave them fairly hands off and come back with very high quality results.",
+          author: "Frederic Branczyk",
+          role: "CEO & Founder, Polar Signals",
+          avatar: "FB"
+        },
+        services: ["Web Design", "Flamegraph Visualization", "Brand Refinement", "Component Systems"],
+        tech: ["Hugo", "TypeScript", "Tailwind CSS", "Go", "SVG Animation"],
+        results: [
+          "Delivered an extremely fast, light, eBPF-profiled marketing site",
+          "Created responsive interactive SVG flamegraph designs for desktop and mobile",
+          "Improved marketing site dwell time by 60% through highly relevant technical diagrams"
+        ],
+        websiteUrl: "https://polarsignals.com"
+      },
+      "railway": {
+        title: "Railway",
+        tagline: "The infrastructure platform for deploying anything",
+        category: "Performance Marketing",
+        logoText: "Rw",
+        logoClass: "case-logo--railway",
+        about: [
+          "Railway is the modern cloud platform developers use to provision infrastructure, databases, and continuous delivery pipelines in seconds. When the team launched their new mobile app to allow deployment monitoring on the go, they needed an explosive performance marketing campaign.",
+          "We created a highly engaging launch video highlighting the sheer ease of 'deploying in the palm of your hand' — while standing in line, waiting for coffee, or on a train. We backed this with a campaign landing page completed under an intensive 10-day deadline.",
+          "By using bold typography, rapid transition loops, and custom-designed mock phone overlays, we delivered an asset package that translated developer infrastructure into high-energy, shareable social media hype."
+        ],
+        services: ["Performance Marketing", "Campaign Art Direction", "Video Production & Editing", "Landing Page Development"],
+        tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Adobe Premiere"],
+        results: [
+          "Engineered and shipped the campaign site and assets in a record 10 days",
+          "Generated 15,000+ new app downloads in the first week after launch",
+          "Boosted waitlist-to-install conversion by 28% through interactive product previews"
+        ],
+        websiteUrl: "https://railway.app"
+      },
+      "unkey": {
+        title: "Unkey",
+        tagline: "The Developer Platform for Modern APIs",
+        category: "Web Development",
+        logoText: "Uk",
+        logoClass: "case-logo--unkey",
+        about: [
+          "Unkey is an open-source API management platform that provides fast, global rate limiting, secure key authorization, custom gateways, and detailed observability in a single, high-performance package.",
+          "We helped Unkey define their brand guidelines from the ground up, designing a stark, modern, monochrome developer aesthetic paired with ultra-vibrant electric neon accents.",
+          "We developed their primary marketing assets, landing pages, and customized dashboard layouts, ensuring the brand stood out as a sleek, reliable, and premium choice for engineering teams managing millions of requests."
+        ],
+        services: ["Visual Identity", "Marketing Landing Page", "UI Component Library", "Illustration & Icon Design"],
+        tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Turborepo"],
+        results: [
+          "Designed and coded a brand-new, comprehensive, open-source brand identity",
+          "Created a customizable SVG illustration toolkit for rate-limiting visualization",
+          "Supported Unkey's public release which was featured at the top of Product Hunt"
+        ],
+        websiteUrl: "https://unkey.dev"
+      },
+      "blackforest": {
+        title: "Black Forest Labs",
+        tagline: "Frontier visual intelligence — the lab behind FLUX",
+        category: "Social Media Marketing",
+        logoText: "Bf",
+        logoClass: "case-logo--blackforest",
+        about: [
+          "Black Forest Labs is the frontier AI lab behind FLUX.1, the state-of-the-art text-to-image generator family that has been widely integrated by industry giants such as Adobe, Canva, and Meta.",
+          "To promote the release of their flagship models — FLUX.1 Kontext and FLUX 2 — they brought us in to design and produce high-impact, narrative-driven social campaigns.",
+          "We produced cinema-grade trailer videos and visual storytelling cards that broke down complex neural net architecture, diffusion weights, and semantic prompt alignment into captivating, beautifully animated assets for their social presence."
+        ],
+        services: ["Social Campaign Strategy", "Video Trailer Production", "3D Motion Graphics", "Narrative Art Direction"],
+        tech: ["Adobe Premiere Pro", "After Effects", "Blender", "FLUX.1 Models", "HuggingFace API"],
+        results: [
+          "Produced two flagship model launch videos with 1.2M+ combined organic views",
+          "Established a unified, dark, scientific visual narrative across Twitter/X, YouTube, and LinkedIn",
+          "Enhanced developer and research engagement, contributing to 40k+ stars on GitHub"
+        ],
+        websiteUrl: "https://blackforestlabs.ai"
+      },
+      "cluely": {
+        title: "Cluely",
+        tagline: "Live AI meeting assistant for real-time insights",
+        category: "SEO",
+        logoText: "Cl",
+        logoClass: "case-logo--cluely",
+        about: [
+          "Cluely is a revolutionary, undetectable AI meeting assistant that runs in the background of video calls, sales conversations, and live streams, giving users real-time insights, answers, and data without ever appearing on screen.",
+          "To capture this highly competitive search market, we developed and implemented a comprehensive organic search engine optimization strategy focused on intent-driven developer search categories.",
+          "We redesigned their product landing pages around specific enterprise keywords, optimized core web vitals, and structured an content pipeline targeting high-value search terms like 'invisible AI meeting recorder' and 'undetectable real-time meeting notes'."
+        ],
+        services: ["SEO Strategy", "Keyword Clustering", "Technical Audit & Optimization", "Page Speed Performance"],
+        tech: ["Next.js", "Tailwind CSS", "Screaming Frog", "Ahrefs", "Google Search Console"],
+        results: [
+          "Boosted organic search traffic by 240% over a six-month period",
+          "Secured #1 ranking on Google for 14 high-conversion, long-tail meeting AI search queries",
+          "Decreased mobile page load times by 1.8 seconds, optimizing Core Web Vitals to pass all categories"
+        ],
+        websiteUrl: "https://cluely.ai"
+      },
+      "harness": {
+        title: "Harness",
+        tagline: "The modern software delivery platform",
+        category: "Web Development",
+        logoText: "Ha",
+        logoClass: "case-logo--harness",
+        about: [
+          "Harness is the industry-leading, AI-augmented software delivery platform that simplifies CI/CD, feature flags, cloud cost management, and pipeline security for millions of developers worldwide.",
+          "As Harness introduced new AI-powered modules, they tasked us with redesigning their Core Platform dashboard portals. We crafted interactive layouts that aggregated build histories, cloud costs, and pipeline safety scores into a unified, clean interface.",
+          "Our work involved creating responsive components, clean custom icon sets, and interactive charts that present deeply complex DevOps telemetry in an executive-ready dashboard format."
+        ],
+        services: ["Dashboard Redesign", "UI Component Library", "Data Visualization", "User Flows"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Storybook"],
+        results: [
+          "Redesigned 8 key core platform modules, streamlining enterprise customer onboarding",
+          "Reduced navigation clutter by 35% through user-tested collapsible sidebar drawers",
+          "Delivered a responsive design system integrated into Harness's internal product workflows"
+        ],
+        websiteUrl: "https://harness.io"
+      },
+      "huly": {
+        title: "Huly",
+        tagline: "Everything App for your teams",
+        category: "Web Development",
+        logoText: "Hy",
+        logoClass: "case-logo--huly",
+        about: [
+          "Huly is an open-source, ultra-fast platform that serves as a unified replacement for Linear, Jira, Slack, and Notion, bringing tasks, chats, docs, and calendars into a single high-performance interface.",
+          "We partnered with the Huly team to design their main marketing experience and landing pages. The goal was to make visitors feel the speed and unity of the app before they even signed up.",
+          "We achieved this by building interactive workspace previews, where visitors could toggle between project management, chat channels, and documents inside a fluid, simulated environment right on the homepage."
+        ],
+        services: ["Marketing Site Design", "Interactive UI Simulations", "Branding Assets", "SVG Illustrations"],
+        tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+        results: [
+          "Co-designed Huly's flagship homepage, highlighting the 'All-in-One' speed promise",
+          "Increased visitor-to-star conversion rate on GitHub by 45%",
+          "Designed and shipped 30+ clean, scalable SVG vector interface layouts"
+        ],
+        websiteUrl: "https://huly.io"
+      },
+      "slash": {
+        title: "Slash",
+        tagline: "Banking built for entrepreneurs",
+        category: "Performance Marketing",
+        logoText: "Sl",
+        logoClass: "case-logo--slash",
+        about: [
+          "Slash provides custom financial technology, business accounts, and virtual card platforms designed for modern online entrepreneurs, e-commerce brands, and fast-growing businesses.",
+          "We designed and engineered Slash's commercial pages to load instantly and handle rich visual sequences. The focus was on creating a modern, high-contrast digital-banking experience that appeals directly to young founders.",
+          "Through smooth, interactive card animations and bento-grid feature highlights, we made complex financial offerings look simple, secure, and incredibly premium."
+        ],
+        quote: {
+          text: "The Blink Beyond team is diligent, fast, and pays attention to detail. We couldn't be happier with the final product and look forward to continuing to work with them.",
+          author: "Victor Cardenas",
+          role: "CEO & Co-founder, Slash",
+          avatar: "VC"
+        },
+        services: ["Performance Marketing", "Commercial Landing Pages", "Web Development", "Card Visualizer GSAP Animation"],
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Vercel"],
+        results: [
+          "Redesigned the entire core merchant banking product pages",
+          "Achieved a perfect 100/100 Lighthouse performance and accessibility score",
+          "Generated a 30% increase in qualified merchant sign-ups during the launch month"
+        ],
+        websiteUrl: "https://slash.com"
+      },
+      "invertase": {
+        title: "Invertase",
+        tagline: "Open-source tools and SDKs for enhanced developer productivity",
+        category: "Social Media Marketing",
+        logoText: "Iv",
+        logoClass: "case-logo--invertase",
+        about: [
+          "Invertase is a world-class software development studio renowned for its open-source developer toolkits, including React Native Firebase and FlutterFire, powering millions of apps globally.",
+          "To elevate their open-source outreach and attract enterprise sponsorships, we crafted a comprehensive social media narrative campaign. We designed a striking visual template series for their Twitter/X and LinkedIn channels.",
+          "We paired these with premium micro-videos highlighting core SDK benchmarks, developer testimonials, and feature releases, making Invertase stand out as a premier authority in cross-platform mobile infrastructure."
+        ],
+        services: ["Social Branding", "Content Creation", "Developer Outreach", "Infographics & SVG Layouts"],
+        tech: ["Figma", "After Effects", "Svelte", "Markdown", "Tailwind CSS"],
+        results: [
+          "Grew organic LinkedIn and Twitter/X following by 85% in four months",
+          "Secured three major enterprise open-source sponsors through the outreach campaign",
+          "Standardized community outreach with a beautiful, reusable visual brand kit"
+        ],
+        websiteUrl: "https://invertase.io"
+      },
+      "searchparty": {
+        title: "Search Party",
+        tagline: "The platform to take control over your brand's AI visibility",
+        category: "SEO",
+        logoText: "Sp",
+        logoClass: "case-logo--searchparty",
+        about: [
+          "Search Party is a cutting-edge platform designed to help companies monitor, audit, and optimize how their brand and products are referenced in AI search engines and LLM engines (like ChatGPT, Gemini, and Claude).",
+          "To position Search Party as the pioneer of AI Search Engine Optimization (GEO), we formulated an extensive technical SEO and keyword strategy centered on search engines of the future.",
+          "We built an optimized content structure and resource directory, ensuring Search Party ranks #1 for all modern queries relating to 'Generative Engine Optimization', 'AI search rankings', and 'LLM citation tracking'."
+        ],
+        services: ["Generative Engine Optimization", "Keyword Authority Research", "Technical Auditing", "Landing Page SEO"],
+        tech: ["Ahrefs", "Google Search Console", "React", "Tailwind CSS", "MDX"],
+        results: [
+          "Ranked #1 on Google for 'Generative Engine Optimization guide' in under 3 months",
+          "Generated over 5,000 organic product signups purely from the resource hub",
+          "Established authority with 120+ high-quality backlinks from major tech publications"
+        ],
+        websiteUrl: "https://searchparty.io"
+      },
+      "gitness": {
+        title: "Gitness",
+        tagline: "Open-source code hosting & pipeline engine",
+        category: "Web Development",
+        logoText: "Gt",
+        logoClass: "case-logo--gitness",
+        about: [
+          "Gitness, backed by Harness, is an open-source alternative to GitHub, bringing together code hosting, secure pull requests, and a lightning-fast CI/CD pipeline engine into a single self-hosted package.",
+          "We designed and built the Gitness open-source promotional portal, highlighting the '4x faster pipelines' and 'one-click GitHub migration' capabilities.",
+          "We structured an interactive comparison layout where developers could input their current build speeds and visually witness how Gitness's Go-based engine streamlines their CI/CD cycle."
+        ],
+        services: ["Promotional Landing Page", "Interactive Speed Calculator", "Web Design", "Responsive Layouts"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "GSAP", "Go"],
+        results: [
+          "Shipped a highly engaging promotional site which drove 10k+ Github Stars",
+          "Created an interactive calculator demonstrating build-time savings of up to 75%",
+          "Optimized mobile responsiveness, leading to a 40% reduction in bounce rate"
+        ],
+        websiteUrl: "https://gitness.com"
+      },
+      "vantage": {
+        title: "Vantage",
+        tagline: "FinOps for modern engineering teams",
+        category: "Web Development",
+        logoText: "Va",
+        logoClass: "case-logo--vantage",
+        about: [
+          "Vantage is the premiere cloud cost intelligence platform that gives engineering teams absolute clarity over their AWS, GCP, Azure, and Snowflake spend without tedious manual reporting.",
+          "We refined their web dashboard structures and optimized their interaction pipelines. We created clean, interactive dashboards featuring clear, responsive cost charts and automated FinOps budget alerts.",
+          "By focusing on visual density and crisp layout grid systems, we ensured that multi-million dollar enterprise cloud budgets could be analyzed smoothly and cleanly by CFOs and engineers alike."
+        ],
+        quote: {
+          text: "The Blink Beyond team was collaborative and responsive, iterating on our feedback until the details matched our vision. The finished website is clean, professional, and exactly what we hoped for.",
+          author: "Emily Dunenfeld",
+          role: "Senior Technical Growth Manager, Vantage",
+          avatar: "ED"
+        },
+        services: ["Dashboard Layout Optimization", "Data Visualizations", "SaaS Marketing Site Refinements", "Component Audit"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Framer Motion"],
+        results: [
+          "Delivered unified, highly polished data-density grid layouts",
+          "Improved dashboard response interactions, removing rendering bottlenecks",
+          "Significantly improved executive team review scores of their public-facing portals"
+        ],
+        websiteUrl: "https://vantage.sh"
+      },
+      "novu": {
+        title: "Novu",
+        tagline: "The open-source notification infrastructure for developers",
+        category: "Performance Marketing",
+        logoText: "No",
+        logoClass: "case-logo--novu",
+        about: [
+          "Novu is the premier open-source developer notification platform, unifying email, SMS, push, and in-app notifications into a single, straightforward API.",
+          "To fuel developer adoption, we designed their community landing pages, visual documentation wrappers, and targeted social ad creatives. The aesthetic focused on a highly developer-native dark mode filled with code snippets and visual flow-charts.",
+          "By designing high-conversion graphics that mapped how Novu replaces complex internal notification microservices, we drove substantial developer registrations."
+        ],
+        quote: {
+          text: "Building an open-source product for engineers, it was important for us to have a design and branding company that understands our target audience. Blink Beyond was the perfect match for this, from the very beginning it felt like we are speaking the same language and you can see it by the amazing results.",
+          author: "Dima Grossman",
+          role: "Co-founder & CTO, Novu",
+          avatar: "DG"
+        },
+        services: ["Developer Performance Marketing", "Landing Page Audit & Design", "Social Creative Kit", "Flow Diagrams"],
+        tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        results: [
+          "Drove a 38% increase in self-hosted developer installations during the campaign",
+          "Crafted a comprehensive, reusable visual social kit for GitHub releases",
+          "Achieved a 50% decrease in marketing acquisition cost (CAC) on LinkedIn Ads"
+        ],
+        websiteUrl: "https://novu.co"
+      },
+      "terzo": {
+        title: "Terzo",
+        tagline: "AI-powered contract platform for business and legal teams",
+        category: "Performance Marketing",
+        logoText: "Tz",
+        logoClass: "case-logo--terzo",
+        about: [
+          "Terzo helps fortune 500 enterprises extract, analyze, and optimize contract data and supplier relationships using smart, AI-powered document understanding tools.",
+          "We completely redesigned Terzo's SaaS marketing web presence, emphasizing their Core AI extraction capabilities and enterprise-grade ROI statistics.",
+          "We developed custom landing pages, clean data table modules, and visual workflow diagrams that illustrate how physical supplier agreements are parsed into structured corporate intelligence instantly."
+        ],
+        quote: {
+          text: "Alex, Kate, and team at Blink Beyond consistently went above and beyond redesigning our new website. Their design work is truly amazing. They did such an excellent job of casting our vision into our new website and helped us find the brand we were seeking. I also appreciated how gritty they were to meet deadlines and get things done. We are looking forward to continuing to build out our website even more with them!",
+          author: "Justin Hiatt",
+          role: "Chief Growth Officer, Terzo",
+          avatar: "JH"
+        },
+        services: ["Enterprise SaaS Branding", "Conversion Rate Optimization", "UI Redesign", "High-Fidelity Prototyping"],
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "GSAP"],
+        results: [
+          "Successfully shipped a complete, high-contrast, premium enterprise SaaS marketing site",
+          "Boosted enterprise sales demo requests by 42% in the first quarter post-launch",
+          "Established a clean, highly secure design pattern matching legal-tech compliance expectations"
+        ],
+        websiteUrl: "https://terzocloud.com"
+      },
+      "revenuecat": {
+        title: "RevenueCat",
+        tagline: "Subscription Management for Mobile Apps",
+        category: "SEO",
+        logoText: "Rc",
+        logoClass: "case-logo--revenuecat",
+        about: [
+          "RevenueCat handles subscriptions, billing engine integrations, in-app purchases, and customer subscription cohorts across millions of active mobile device installations.",
+          "To position RevenueCat as the global authority for mobile app monetisation, we partnered on a massive SEO and content-lead expansion. We optimized their marketing and resource pages, onboarding portals, and community-driven forum layouts.",
+          "We redesigned their comparison tables, established structured metadata indexing for search engines, and maximized the performance scores of their massive resource guides, turning their blog into a primary lead generator."
+        ],
+        quote: {
+          text: "Blink Beyond was an amazing partner to work with. They were able to translate our vision for our brand into a beautiful finished product and were collaborative and responsive every step of the way.",
+          author: "Corey Rabazinski",
+          role: "Head of Marketing, RevenueCat",
+          avatar: "CR"
+        },
+        services: ["SEO Infrastructure", "Resource Portal Design", "Tabular Content UX", "Onboarding Refinement"],
+        tech: ["Webflow", "Next.js", "Tailwind CSS", "Ahrefs", "PageSpeed Insights"],
+        results: [
+          "Increased organic blog search visibility by 180% year-over-year",
+          "Secured top rankings for industry-critical terms like 'iOS subscription receipt validation'",
+          "Improved self-serve platform registrations by 22% through streamlined onboarding UX"
+        ],
+        websiteUrl: "https://revenuecat.com"
+      }
+    };
+
+    // Helper to get query parameters
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get the case ID from url, default to 'databricks'
+      let caseId = getQueryParam('case');
+      if (!caseId || !caseStudiesDb[caseId]) {
+        caseId = 'databricks';
+      }
+
+      const currentCase = caseStudiesDb[caseId];
+
+      // Update Page Metadata
+      document.title = `${currentCase.title} Case Study — Blink Beyond`;
+      const descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) {
+        descMeta.setAttribute('content', `${currentCase.title} — ${currentCase.tagline}. See how Blink Beyond delivered premium results.`);
+      }
+
+      // Populate Hero Section
+      document.getElementById('case-hero-category').textContent = currentCase.category;
+      
+      const logoEl = document.getElementById('case-hero-logo');
+      logoEl.textContent = currentCase.logoText;
+      logoEl.className = `logo-container-hero ${currentCase.logoClass}`;
+
+      document.getElementById('case-hero-title').textContent = currentCase.title;
+      document.getElementById('case-hero-tagline').textContent = currentCase.tagline;
+
+      // Populate About Paragraphs
+      const aboutContainer = document.getElementById('case-about-paragraphs');
+      aboutContainer.innerHTML = '';
+      currentCase.about.forEach(pText => {
+        const p = document.createElement('p');
+        p.className = 'narrative-p';
+        p.textContent = pText;
+        aboutContainer.appendChild(p);
+      });
+
+      // Populate Quote/Testimonial Section if exists
+      const quoteWrapper = document.getElementById('case-quote-wrapper');
+      if (currentCase.quote) {
+        quoteWrapper.style.display = 'block';
+        document.getElementById('case-quote-text').textContent = `"${currentCase.quote.text}"`;
+        document.getElementById('case-quote-avatar').textContent = currentCase.quote.avatar;
+        document.getElementById('case-quote-name').textContent = currentCase.quote.author;
+        document.getElementById('case-quote-role').textContent = currentCase.quote.role;
+      } else {
+        quoteWrapper.style.display = 'none';
+      }
+
+      // Populate Key Results & Outcomes
+      const resultsContainer = document.getElementById('case-results-list');
+      resultsContainer.innerHTML = '';
+      currentCase.results.forEach(resText => {
+        const item = document.createElement('div');
+        item.className = 'result-item';
+        
+        const icon = document.createElement('div');
+        icon.className = 'result-icon';
+        icon.textContent = '✓';
+        
+        const text = document.createElement('div');
+        text.className = 'result-text';
+        text.textContent = resText;
+        
+        item.appendChild(icon);
+        item.appendChild(text);
+        resultsContainer.appendChild(item);
+      });
+
+      // Populate Sidebar CTA Link
+      const visitCta = document.getElementById('case-visit-cta');
+      visitCta.setAttribute('href', currentCase.websiteUrl);
+      visitCta.innerHTML = `Visit ${currentCase.title} <span>→</span>`;
+
+      // Populate Services Tags
+      const servicesContainer = document.getElementById('case-services-tags');
+      servicesContainer.innerHTML = '';
+      currentCase.services.forEach(service => {
+        const span = document.createElement('span');
+        span.className = 'case-tag';
+        span.textContent = service;
+        servicesContainer.appendChild(span);
+      });
+
+      // Populate Technology Tags
+      const techContainer = document.getElementById('case-tech-tags');
+      techContainer.innerHTML = '';
+      currentCase.tech.forEach(techItem => {
+        const span = document.createElement('span');
+        span.className = 'case-tag';
+        span.textContent = techItem;
+        techContainer.appendChild(span);
+      });
+
+      // Determine next case study in alphabetical list or index-based loop
+      const caseKeys = Object.keys(caseStudiesDb);
+      const currentIndex = caseKeys.indexOf(caseId);
+      const nextIndex = (currentIndex + 1) % caseKeys.length;
+      const nextCaseKey = caseKeys[nextIndex];
+      const nextCase = caseStudiesDb[nextCaseKey];
+
+      // Populate Browse Up Next Section
+      document.getElementById('next-case-name').textContent = nextCase.title;
+      const nextLink = document.getElementById('next-case-link');
+      nextLink.setAttribute('href', `case-study-detail.html?case=${nextCaseKey}`);
+      nextLink.innerHTML = `Read ${nextCase.title} Case <span>→</span>`;
+
+      // Trigger standard ScrollTrigger elements animations if gsap is active
+      if (typeof gsap !== 'undefined') {
+        gsap.from('.back-btn', { opacity: 0, x: -10, duration: 0.6, delay: 0.5 });
+        gsap.from('#case-hero-category, #case-hero-logo', { opacity: 0, y: 10, duration: 0.6, stagger: 0.1, delay: 0.6 });
+        gsap.from('#case-hero-title', { opacity: 0, y: 20, duration: 0.8, ease: 'power3.out', delay: 0.7 });
+        gsap.from('#case-hero-tagline', { opacity: 0, y: 15, duration: 0.8, ease: 'power3.out', delay: 0.8 });
+        
+        gsap.from('.case-detail-grid', {
+          opacity: 0,
+          y: 30,
+          duration: 1.0,
+          ease: 'power3.out',
+          delay: 0.9
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1535,112 +1535,140 @@ body.bb-card-hint-seen .info-card .info-card-content::after {
   background-color: #3d3dff;
   color: #fff;
   z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  padding: clamp(20px, 3vh, 40px) clamp(24px, 5vw, 80px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-areas:
+    "header header"
+    "body footer";
+  padding: clamp(24px, 5vh, 50px) clamp(30px, 6vw, 90px);
   transform: translateY(100%);
   visibility: hidden;
-  overflow-y: hidden;
-  overflow-x: clip;
+  overflow: hidden;
 }
 
-/* ── Header row: tagline left, close right ── */
+/* ── Header row: logo left, tagline center, close right ── */
 .fs-menu-header {
-  display: flex;
-  justify-content: space-between;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: clamp(12px, 2vh, 20px);
+}
+
+.fs-menu-logo {
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+
+.fs-menu-logo-img {
+  display: block;
+  height: 31px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .fs-menu-tagline {
+  grid-column: 2;
+  justify-self: center;
   font-family: var(--font-body, sans-serif);
-  font-size: clamp(11px, 1.2vw, 14px);
+  font-size: clamp(11px, 1.2vw, 13px);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0.8;
+  letter-spacing: 3px;
+  color: #fff;
+  opacity: 0.9;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .fs-menu-close {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  color: #fff;
+  grid-column: 3;
+  justify-self: end;
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 4px;
+  color: #3d3dff !important;
   font-family: var(--font-body, sans-serif);
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s, border-color 0.3s;
+  padding: 12px 26px;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .fs-menu-close:hover {
-  background-color: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .fs-close-icon {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* ── Body: vertically centered links ── */
 .fs-menu-body {
-  flex: 1;
+  grid-area: body;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(16px, 3vh, 40px) 0;
+  align-items: flex-start;
+  padding: clamp(20px, 4.5vh, 45px) 0;
   min-height: 0;
+  height: 100%;
 }
 
 .fs-menu-links {
   display: flex;
   flex-direction: column;
-  gap: clamp(4px, 1.5vh, 16px);
+  gap: clamp(8px, 1.5vh, 16px);
 }
 
 /* ── Individual nav link ── */
 .fs-link {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.55);
   font-family: var(--font-display, 'Barlow Condensed', sans-serif);
-  font-size: clamp(52px, 9vw, 130px);
+  font-size: clamp(70px, 12vh, 145px);
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
   display: block;
   width: fit-content;
   cursor: pointer;
-  transition: color 0.35s ease;
+  transition: color 0.35s cubic-bezier(0.25, 1, 0.5, 1), padding-left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.fs-link:hover {
+.fs-link:hover, .fs-link.is-active {
   color: #fff;
+  padding-left: clamp(15px, 2.5vw, 35px);
 }
 
-/* ── Text-roll wrapper: sized by the relative top layer ── */
+/* ── Text-roll wrapper ── */
 .text-roll-wrapper {
   position: relative;
   display: block;
   overflow: hidden;
-  /* Extra right clearance so italic glyphs aren't clipped */
   padding-right: 0.12em;
 }
 
-/* Top layer is RELATIVE — it flows in the DOM and defines the wrapper size */
 .text-roll-top {
   display: flex;
   position: relative;
 }
 
-/* Bottom layer is ABSOLUTE — stacked underneath, letters positioned by GSAP */
 .text-roll-bottom {
   display: flex;
   position: absolute;
@@ -1654,55 +1682,63 @@ body.bb-card-hint-seen .info-card .info-card-content::after {
   will-change: transform;
 }
 
-/* ── Footer: tagline left, socials+legal right ── */
+/* ── Footer / Right Panel ── */
 .fs-menu-footer {
+  grid-area: footer;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
-  flex-shrink: 0;
-  padding-top: clamp(16px, 2vh, 32px);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: var(--font-body, sans-serif);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  text-align: right;
+  border-top: none;
+  padding-top: 0;
+  height: 100%;
+  gap: 35px;
 }
 
 .fs-footer-left {
-  max-width: 220px;
-  line-height: 1.5;
-  opacity: 0.7;
+  order: 3;
+  font-family: var(--font-body, sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #fff;
+  opacity: 0.8;
+  text-transform: uppercase;
 }
 
 .fs-social-legal {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 14px;
+  gap: 25px;
+  width: 100%;
 }
 
 .fs-socials {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  justify-content: flex-end;
 }
 
 .fs-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .fs-social-link:hover {
   background-color: #fff;
   color: #3d3dff;
   border-color: #fff;
+  transform: translateY(-2px);
 }
 
 .fs-social-link svg {
@@ -1713,25 +1749,32 @@ body.bb-card-hint-seen .info-card .info-card-content::after {
 
 .fs-legal {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  opacity: 0.6;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
 }
 
 .fs-legal a, .fs-legal span {
   color: #fff;
   text-decoration: none;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-family: var(--font-body, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .fs-legal a {
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  transition: border-bottom-color 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .fs-legal a:hover {
-  border-bottom-color: #fff;
+  opacity: 1;
+  transform: translateX(-4px);
 }
 
 

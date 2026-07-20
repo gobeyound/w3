@@ -19,7 +19,13 @@ const mimeTypes = {
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
-  '.webp': 'image/webp'
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.gif': 'image/gif',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
+  '.mov': 'video/quicktime',
+  '.ico': 'image/x-icon'
 };
 
 async function handleAgentAPI(req, res) {
@@ -50,7 +56,7 @@ Keep responses concise and conversational — they will be spoken aloud.
 
 You can also issue navigation or scroll commands by including a "surfCommand" in your JSON response.
 
-Available pages: / (home), /about.html (about us), /services.html (services), /contact.html (contact)
+Available pages: / (home), /about.html (about us), /services.html (services), /case-studies.html (case studies), /contact.html (contact)
 Available scroll targets (CSS selectors): #hero, #services, #about, #contact, footer
 
 Always respond in this exact JSON format:

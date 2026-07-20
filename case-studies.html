@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies — Blink Beyond</title>
+  <meta name="description"
+    content="Explore our case studies — see how Blink Beyond helps high-growth companies achieve their goals through web development, design, and branding.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Blink Beyond | Case Studies">
+  <meta property="og:description" content="Where brands blink and boom. See how we have helped our clients grow and scale.">
+  <meta property="og:image" content="https://blinkbeyond.co.in/assets/og-image.jpg">
+  <meta property="og:url" content="https://blinkbeyond.co.in/case-studies.html">
+  <meta property="og:type" content="website">
+  <script>
+    (function() {
+      var seen = false;
+      try {
+        seen = localStorage.getItem('bb_loader_seen') === '1';
+      } catch (e) {}
+      if (!seen && /(?:^|; )bb_loader_seen=1/.test(document.cookie)) {
+        seen = true;
+      }
+      if (seen) {
+        document.documentElement.classList.add('bb-loader-skip');
+      }
+      try {
+        if (sessionStorage.getItem('bb_page_transition') === '1') {
+          document.documentElement.classList.add('bb-entering');
+          document.documentElement.style.background = '#3D3DFF';
+          document.documentElement.style.backgroundColor = '#3D3DFF';
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop/desktop.css">
+  <link rel="stylesheet" href="css/tablet/tablet.css">
+  <link rel="stylesheet" href="css/mobile/mobile.css">
+
+  <style>
+    /* ═══════════════ CASE STUDIES PREMIUM STYLING ═══════════════ */
+    :root {
+      --case-card-bg: #FFFFFF;
+      --case-border-color: rgba(0, 0, 0, 0.07);
+      --case-border-hover: rgba(61, 61, 255, 0.15);
+      --transition-standard: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Page Header Overrides */
+    .page-header {
+      padding: calc(var(--nav-height) + 80px) 24px 24px;
+      text-align: center;
+      background: #F5F5F7;
+      border-bottom: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1400px;
+      height: 100%;
+      background: radial-gradient(circle at 50% 20%, rgba(61, 61, 255, 0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 96px);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .page-header .page-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 1.8vw, 22px);
+      color: #555;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Filtering Controls */
+    .filter-wrapper {
+      background: #F5F5F7;
+      padding: 12px 24px 44px;
+      border-bottom: 1px solid var(--case-border-color);
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.03);
+      padding: 6px;
+      border-radius: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: var(--transition-standard);
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      transition: var(--transition-standard);
+    }
+
+    .filter-btn:hover {
+      color: var(--black);
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .filter-btn.active {
+      color: var(--white);
+      background: var(--blue);
+      box-shadow: 0 4px 15px rgba(61, 61, 255, 0.25);
+    }
+
+    @media (max-width: 1024px) {
+      .filter-container {
+        border-radius: 20px;
+        padding: 8px;
+        gap: 8px;
+        justify-content: center;
+        max-width: 680px;
+      }
+      .filter-btn {
+        border-radius: 12px;
+        padding: 8px 18px;
+        font-size: 12px;
+      }
+      .filter-btn.active {
+        border-radius: 12px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .filter-wrapper {
+        padding: 8px 16px 36px;
+      }
+      .filter-container {
+        border-radius: 16px;
+        width: 100%;
+        gap: 6px;
+        padding: 6px;
+      }
+      .filter-btn {
+        flex: 1 1 calc(33.33% - 6px);
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 11px;
+      }
+      .filter-btn.active {
+        border-radius: 10px;
+      }
+    }
+
+    /* Main Grid Section */
+    .case-studies-section {
+      background: #F3F3F4;
+      padding: clamp(60px, 8vh, 120px) 0;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .case-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* Case Card Styling */
+    .case-card {
+      background: var(--case-card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--case-border-color);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: var(--transition-standard);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .case-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--case-border-hover);
+      box-shadow: 0 20px 40px rgba(61, 61, 255, 0.04), 0 1px 3px rgba(0, 0, 0, 0.01);
+    }
+
+    /* Card Layout Internals */
+    .case-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .case-badge {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      background: rgba(61, 61, 255, 0.06);
+      padding: 5px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(61, 61, 255, 0.08);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .case-badge::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* Stylized Logos with custom aesthetics */
+    .case-logo-container {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #F5F5F7;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      color: #111;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+      flex-shrink: 0;
+    }
+
+    /* Logo Gradients & Theming */
+    .case-logo--databricks { background: linear-gradient(135deg, #FF6F00 0%, #FF3D00 100%); color: var(--white); }
+    .case-logo--neon { background: linear-gradient(135deg, #00E676 0%, #00B0FF 100%); color: var(--white); }
+    .case-logo--interhuman { background: linear-gradient(135deg, #7C4DFF 0%, #FF4081 100%); color: var(--white); }
+    .case-logo--polarsignals { background: linear-gradient(135deg, #D500F9 0%, #FF1744 100%); color: var(--white); }
+    .case-logo--railway { background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%); color: var(--white); }
+    .case-logo--unkey { background: linear-gradient(135deg, #212121 0%, #424242 100%); color: var(--white); }
+    .case-logo--blackforest { background: linear-gradient(135deg, #F50057 0%, #FF8F00 100%); color: var(--white); }
+    .case-logo--cluely { background: linear-gradient(135deg, #00B0FF 0%, #2979FF 100%); color: var(--white); }
+    .case-logo--harness { background: linear-gradient(135deg, #3D3DFF 0%, #111111 100%); color: var(--white); }
+    .case-logo--huly { background: linear-gradient(135deg, #111 0%, #333 100%); color: var(--white); }
+    .case-logo--slash { background: linear-gradient(135deg, #1DE9B6 0%, #00B0FF 100%); color: #111; }
+    .case-logo--invertase { background: linear-gradient(135deg, #FF3D00 0%, #FFD600 100%); color: var(--white); }
+    .case-logo--searchparty { background: linear-gradient(135deg, #651FFF 0%, #00E5FF 100%); color: var(--white); }
+    .case-logo--gitness { background: linear-gradient(135deg, #FF9100 0%, #FF3D00 100%); color: var(--white); }
+    .case-logo--vantage { background: linear-gradient(135deg, #00C853 0%, #00B0FF 100%); color: var(--white); }
+    .case-logo--novu { background: linear-gradient(135deg, #FF1744 0%, #D500F9 100%); color: var(--white); }
+    .case-logo--terzo { background: linear-gradient(135deg, #2979FF 0%, #00E676 100%); color: var(--white); }
+    .case-logo--revenuecat { background: linear-gradient(135deg, #E040FB 0%, #FF80AB 100%); color: var(--white); }
+
+    .case-card-body h3 {
+      font-family: var(--font-body);
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .case-tagline {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .case-desc {
+      font-family: var(--font-body);
+      font-size: clamp(14px, 1.1vw, 15px);
+      color: #4A4A4A;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Quote blocks */
+    .case-quote-block {
+      background: #F8F9FA;
+      border-left: 3px solid var(--blue);
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .case-quote-text {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 13.5px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .case-quote-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .case-author-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(61, 61, 255, 0.1);
+      border: 1px solid rgba(61, 61, 255, 0.15);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .case-author-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-author-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .case-author-role {
+      font-size: 10px;
+      color: #777;
+    }
+
+    /* Card Footer Link */
+    .case-card-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.04);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .case-visit-link {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #111;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-standard);
+    }
+
+    .case-visit-link span {
+      transition: transform 0.3s ease;
+    }
+
+    .case-card:hover .case-visit-link {
+      color: var(--blue);
+    }
+
+    .case-card:hover .case-visit-link span {
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════ ARTICLES SECTION ═══════════════ */
+    .articles-section {
+      background: #F5F5F7;
+      padding: clamp(60px, 8vh, 120px) 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .articles-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .articles-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--case-border-color);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-standard);
+      cursor: pointer;
+    }
+
+    .article-card:hover {
+      border-color: var(--case-border-hover);
+      box-shadow: 0 10px 25px rgba(61, 61, 255, 0.03);
+      transform: translateY(-2px);
+    }
+
+    .article-meta {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .article-title {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--black);
+      margin-bottom: 20px;
+    }
+
+    .article-link {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-link span {
+      transition: transform 0.3s ease;
+    }
+
+    .article-card:hover .article-link span {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-transition-overlay"></div>
+  <!-- ═══════════════ PAGE LOADER ═══════════════ -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-bg-glow"></div>
+    <div class="loader-center">
+      <div class="loader-wordmark-wrap">
+        <span class="loader-fill-ghost">BLINK BEYOND</span>
+        <span class="loader-fill-text" id="loader-fill-text">BLINK BEYOND</span>
+      </div>
+      <p class="loader-tagline">Where Brands Blink &amp; Boom</p>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-counter" id="loader-percent" data-value="0%">0%</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <div class="loader-loading-text">Loading</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="navbar" id="cardNav">
+    <div class="card-nav-top">
+      <button class="cn-hamburger" id="cnHamburger" aria-label="Open menu">
+        <span class="cn-line"></span>
+        <span class="cn-line"></span>
+        <span class="cn-label">MENU</span>
+      </button>
+      <a href="index.html" class="nav-logo" aria-label="Blink Beyond — Home"><img src="assets/logo.png" alt="Blink Beyond" class="nav-logo-img" width="130" height="31"></a>
+      <a href="contact.html" class="cn-cta">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ FULLSCREEN MENU OVERLAY ═══════════════ -->
+  <div class="fullscreen-menu" id="fsMenu">
+    <div class="fs-menu-header">
+      <span class="fs-menu-tagline">Where Brands Blink &amp; Boom</span>
+      <button class="fs-menu-close" id="fsMenuClose" aria-label="Close menu">
+        <span class="fs-close-icon">✕</span> CLOSE
+      </button>
+    </div>
+    <div class="fs-menu-body">
+      <div class="fs-menu-links">
+        <a href="index.html" class="fs-link" data-text="HOME">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="about.html" class="fs-link" data-text="ABOUT">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="services.html" class="fs-link" data-text="SERVICES">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="case-studies.html" class="fs-link" data-text="CASES">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+        <a href="contact.html" class="fs-link" data-text="CONTACT">
+          <span class="text-roll-wrapper"><span class="text-roll-top"></span><span class="text-roll-bottom"></span></span>
+        </a>
+      </div>
+    </div>
+    <div class="fs-menu-footer">
+      <div class="fs-footer-left">© BLINK BEYOND 2026 — ALL RIGHTS RESERVED</div>
+      <div class="fs-social-legal">
+        <div class="fs-socials">
+          <a href="#" class="fs-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="fs-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" class="fs-social-link" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" class="fs-social-link" aria-label="Behance">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.63.165-1.27.25-1.95.25H0V4.51h6.938v-.007zM6.545 10.96c.6 0 1.1-.16 1.46-.49.37-.33.555-.79.555-1.38 0-.33-.06-.6-.18-.82-.12-.22-.29-.39-.52-.52-.21-.13-.46-.22-.74-.27-.28-.05-.57-.08-.87-.08H3.72v3.56h2.825zm.185 6.14c.33 0 .64-.04.93-.12.29-.08.54-.21.76-.39.22-.17.39-.4.51-.68.12-.28.18-.62.18-1.02 0-.81-.24-1.39-.71-1.74-.47-.35-1.08-.52-1.84-.52H3.72v4.47h3.01zM15.28 16.18c.39.38.91.58 1.58.58.48 0 .9-.12 1.26-.37.36-.25.58-.52.68-.83h2.27c-.36 1.13-.91 1.95-1.66 2.46-.74.51-1.64.77-2.69.77-.73 0-1.39-.13-1.96-.38-.58-.26-1.07-.62-1.48-1.09-.4-.47-.71-1.03-.93-1.68-.21-.65-.32-1.36-.32-2.13 0-.75.11-1.45.34-2.09.23-.64.55-1.2.97-1.66.42-.46.92-.83 1.5-1.08.58-.26 1.23-.38 1.93-.38.78 0 1.46.15 2.04.45.58.31 1.06.72 1.43 1.25.37.52.64 1.13.81 1.81.16.68.21 1.4.14 2.16h-6.79c.03.87.34 1.58.73 1.96zm2.77-5.09c-.32-.34-.79-.52-1.41-.52-.41 0-.75.07-1.02.22-.27.14-.48.33-.64.55-.15.22-.26.45-.31.7-.06.25-.09.47-.09.68h4.31c-.1-.8-.39-1.29-.71-1.63h-.13zM15.435 4.88h4.56v1.32h-4.56V4.88z"/></svg>
+          </a>
+        </div>
+        <div class="fs-legal">
+          <a href="#">/PRIVACY POLICY/</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CASE STUDIES HERO ═══════════════ -->
+  <div class="page-header">
+    <span class="trusted-sec-badge">✦ OUR CLIENT SUCCESS STORIES</span>
+    <h1>Case Studies</h1>
+    <p class="page-subtitle">See how we have helped our customers grow and achieve their goals by combining design and engineering</p>
+  </div>
+
+  <!-- ═══════════════ CATEGORY FILTERING ═══════════════ -->
+  <div class="filter-wrapper">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All Cases</button>
+      <button class="filter-btn" data-filter="web-dev">Web Development</button>
+      <button class="filter-btn" data-filter="social-marketing">Social Media</button>
+      <button class="filter-btn" data-filter="performance-marketing">Performance Marketing</button>
+      <button class="filter-btn" data-filter="seo">SEO</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CASE GRID ═══════════════ -->
+  <section class="case-studies-section">
+    <div class="container">
+      <div class="case-grid">
+
+        <!-- Case 1: Databricks (Web Development) -->
+        <a href="case-study-detail.html?case=databricks" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--databricks">Db</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Databricks</h3>
+            <p class="case-tagline">Developer hub for the data and AI company</p>
+            <p class="case-desc">Databricks is the data and AI company behind the Data Intelligence Platform, and our collaboration began when they acquired Neon — our long-term client of five years. Our first project together is the Databricks Developer Hub, built for the agentic era, where custom interactive animations play out the journey from a single prompt to a live, deployed app.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 2: Interhuman AI (Social Media Marketing) -->
+        <a href="case-study-detail.html?case=interhuman" class="case-card reveal" data-category="social-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Social Media Marketing</span>
+            <div class="case-logo-container case-logo--interhuman">Ih</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Interhuman AI</h3>
+            <p class="case-tagline">The social intelligence layer for AI</p>
+            <p class="case-desc">Interhuman AI is building the social intelligence layer for AI to let machines read the human communication that happens beyond words. For the launch of Inter-1, their omni-modal model detecting social signals from video, audio, and text, we produced a product video that shows what it means for AI to finally read the room.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 3: Neon (Web Development - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=neon" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--neon">Ne</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Neon</h3>
+            <p class="case-tagline">Open Source serverless Postgres</p>
+            <p class="case-desc">Neon is a developer-focused serverless Postgres platform. We helped translate their high-tech product features into a scalable branding system and created tailored, high-fidelity developer dashboards.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"While building a developer-oriented product, we struggled to explain our needs to design agencies until we started with Blink Beyond. Unlike others, Blink Beyond quickly understood our product and target audience. Blink Beyond delivered exceptional results in a short timeframe and became an extension of our dev and product teams, contributing to many areas without any communication bureaucracy."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">SK</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Stas Kelvich</span>
+                  <span class="case-author-role">Co-Founder, Neon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 4: Polar Signals (Web Development - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=polarsignals" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--polarsignals">Ps</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Polar Signals</h3>
+            <p class="case-tagline">Always-on continuous profiling for CPU, GPU, and memory</p>
+            <p class="case-desc">Polar Signals delivers zero-overhead continuous profiling tools for modern servers. We completely redesigned their marketing site and established structured components to showcase complex flamegraphs effortlessly.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"We shipped features for years but neglected our website presence. Blink Beyond has been an awesome partner to help us now keep it up to date. I particularly enjoy that the team is very technical so it has been a breeze working with them without us having to explain much. I also enjoyed that we could leave them fairly hands off and come back with very high quality results."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">FB</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Frederic Branczyk</span>
+                  <span class="case-author-role">CEO &amp; Founder, Polar Signals</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 5: Railway (Performance Marketing) -->
+        <a href="case-study-detail.html?case=railway" class="case-card reveal" data-category="performance-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Performance Marketing</span>
+            <div class="case-logo-container case-logo--railway">Rw</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Railway</h3>
+            <p class="case-tagline">The infrastructure platform for deploying anything</p>
+            <p class="case-desc">Railway is the infrastructure platform developers use to deploy anything — from side projects to production systems — without touching servers. When the team brought their platform to mobile, they needed a launch video for the new app, plus a campaign landing page delivered on a ten-day deadline.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 6: Unkey (Web Development) -->
+        <a href="case-study-detail.html?case=unkey" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--unkey">Uk</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Unkey</h3>
+            <p class="case-tagline">The Developer Platform for Modern APIs</p>
+            <p class="case-desc">Unkey is the developer platform for modern APIs, unifying key management, rate limiting, gateways, and observability into a single control plane. With their full trust, we built a scalable branding system from the ground up and developed custom tooling to accelerate creative workflows.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 7: Black Forest Labs (Social Media Marketing) -->
+        <a href="case-study-detail.html?case=blackforest" class="case-card reveal" data-category="social-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Social Media Marketing</span>
+            <div class="case-logo-container case-logo--blackforest">Bf</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Black Forest Labs</h3>
+            <p class="case-tagline">Frontier visual intelligence — the lab behind FLUX</p>
+            <p class="case-desc">Black Forest Labs is the frontier AI lab behind FLUX, one of the most widely adopted image model families in the world, integrated by Adobe, Canva, and Meta. We produced launch videos for two of their flagship releases — FLUX.1 Kontext and FLUX 2 — translating frontier research into stories anyone can watch and understand.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 8: Cluely (SEO) -->
+        <a href="case-study-detail.html?case=cluely" class="case-card reveal" data-category="seo">
+          <div class="case-card-top">
+            <span class="case-badge">Search Engine Optimisation</span>
+            <div class="case-logo-container case-logo--cluely">Cl</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Cluely</h3>
+            <p class="case-tagline">Live AI meeting assistant for real-time insights</p>
+            <p class="case-desc">Cluely is redefining the way professionals access information during live conversations. Their undetectable AI assistant provides real-time answers in meetings, sales calls, and across any application — without ever appearing on screen.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 9: Harness (Web Development) -->
+        <a href="case-study-detail.html?case=harness" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--harness">Ha</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Harness</h3>
+            <p class="case-tagline">The modern software delivery platform</p>
+            <p class="case-desc">Harness is the world's first AI-augmented software delivery platform that helps developers simplify their work with innovative CI/CD, feature flags, infrastructure as code management, and chaos engineering tools.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 10: Huly (Web Development) -->
+        <a href="case-study-detail.html?case=huly" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--huly">Hy</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Huly</h3>
+            <p class="case-tagline">Everything App for your teams</p>
+            <p class="case-desc">Huly is an open-source platform that serves as an all-in-one replacement of Linear, Jira, Slack, and Notion.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 11: Slash (Performance Marketing - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=slash" class="case-card reveal" data-category="performance-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Performance Marketing</span>
+            <div class="case-logo-container case-logo--slash">Sl</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Slash</h3>
+            <p class="case-tagline">Banking built for entrepreneurs</p>
+            <p class="case-desc">Slash provides custom financial technology and secure card platforms for growing businesses. We engineered their core commercial pages to load instantly and handle rich visual sequences seamlessly.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"The Blink Beyond team is diligent, fast, and pays attention to detail. We couldn't be happier with the final product and look forward to continuing to work with them."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">VC</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Victor Cardenas</span>
+                  <span class="case-author-role">CEO &amp; Co-founder, Slash</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 12: Invertase (Social Media Marketing) -->
+        <a href="case-study-detail.html?case=invertase" class="case-card reveal" data-category="social-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Social Media Marketing</span>
+            <div class="case-logo-container case-logo--invertase">Iv</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Invertase</h3>
+            <p class="case-tagline">Open-source tools and SDKs for enhanced developer productivity</p>
+            <p class="case-desc">Invertase is a leading software development company specializing in open-source tools and infrastructure for modern web and mobile applications. Known for projects like Firebase Extended and React Native Firebase, Invertase provides developers with high-performance solutions that enhance productivity and scalability.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 13: Search Party (SEO) -->
+        <a href="case-study-detail.html?case=searchparty" class="case-card reveal" data-category="seo">
+          <div class="case-card-top">
+            <span class="case-badge">Search Engine Optimisation</span>
+            <div class="case-logo-container case-logo--searchparty">Sp</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Search Party</h3>
+            <p class="case-tagline">The platform to take control over your brand's AI visibility</p>
+            <p class="case-desc">Search Party helps you track, analyze, and control how your brand appears in AI-generated answers across large language models like ChatGPT, Gemini, and Claude.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 14: Gitness (Web Development) -->
+        <a href="case-study-detail.html?case=gitness" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--gitness">Gt</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Gitness</h3>
+            <p class="case-tagline">Open-source code hosting &amp; pipeline engine</p>
+            <p class="case-desc">Gitness, by Harness, is an open-source code hosting and CI/CD platform. It features robust security, one-click migration from platforms like GitHub, and delivers 4x faster pipeline execution with versatile templates.</p>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 15: Vantage (Web Development - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=vantage" class="case-card reveal" data-category="web-dev">
+          <div class="case-card-top">
+            <span class="case-badge">Web Development</span>
+            <div class="case-logo-container case-logo--vantage">Va</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Vantage</h3>
+            <p class="case-tagline">FinOps for modern engineering teams</p>
+            <p class="case-desc">Vantage provides deep cloud cost intelligence and FinOps platforms for engineering leaders. We refined their web dashboard structures and optimized their interaction pipelines.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"The Blink Beyond team was collaborative and responsive, iterating on our feedback until the details matched our vision. The finished website is clean, professional, and exactly what we hoped for."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">ED</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Emily Dunenfeld</span>
+                  <span class="case-author-role">Senior Technical Growth Manager, Vantage</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 16: Novu (Performance Marketing - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=novu" class="case-card reveal" data-category="performance-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Performance Marketing</span>
+            <div class="case-logo-container case-logo--novu">No</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Novu</h3>
+            <p class="case-tagline">The open-source notification infrastructure for developers</p>
+            <p class="case-desc">Novu is an open-source developer notification pipeline. We crafted their developer community landing pages and visual documentation wrappers to boost initial signups.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"Building an open-source product for engineers, it was important for us to have a design and branding company that understands our target audience. Blink Beyond was the perfect match for this, from the very beginning it felt like we are speaking the same language and you can see it by the amazing results."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">DG</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Dima Grossman</span>
+                  <span class="case-author-role">Co-founder &amp; CTO, Novu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 17: Terzo (Performance Marketing - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=terzo" class="case-card reveal" data-category="performance-marketing">
+          <div class="case-card-top">
+            <span class="case-badge">Performance Marketing</span>
+            <div class="case-logo-container case-logo--terzo">Tz</div>
+          </div>
+          <div class="case-card-body">
+            <h3>Terzo</h3>
+            <p class="case-tagline">AI-powered contract platform for business and legal teams</p>
+            <p class="case-desc">Terzo helps enterprises manage supplier contracts with smart AI tooling. We built a clean SaaS web presence focusing on conversion rate metrics and clear, readable tabular data displays.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"Alex, Kate, and team at Blink Beyond consistently went above and beyond redesigning our new website. Their design work is truly amazing. They did such an excellent job of casting our vision into our new website and helped us find the brand we were seeking. I also appreciated how gritty they were to meet deadlines and get things done. We are looking forward to continuing to build out our website even more with them!"</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">JH</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Justin Hiatt</span>
+                  <span class="case-author-role">Chief Growth Officer, Terzo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Case 18: RevenueCat (SEO - TESTIMONIAL) -->
+        <a href="case-study-detail.html?case=revenuecat" class="case-card reveal" data-category="seo">
+          <div class="case-card-top">
+            <span class="case-badge">Search Engine Optimisation</span>
+            <div class="case-logo-container case-logo--revenuecat">Rc</div>
+          </div>
+          <div class="case-card-body">
+            <h3>RevenueCat</h3>
+            <p class="case-tagline">Subscription Management for Mobile Apps</p>
+            <p class="case-desc">RevenueCat handles subscriptions, billing engine integration, and cohort tracking across millions of iOS and Android installs. We redesigned key segments of their core onboarding and marketing portals.</p>
+            
+            <div class="case-quote-block">
+              <p class="case-quote-text">"Blink Beyond was an amazing partner to work with. They were able to translate our vision for our brand into a beautiful finished product and were collaborative and responsive every step of the way."</p>
+              <div class="case-quote-author">
+                <div class="case-author-avatar">CR</div>
+                <div class="case-author-meta">
+                  <span class="case-author-name">Corey Rabazinski</span>
+                  <span class="case-author-role">Head of Marketing, RevenueCat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-card-footer">
+            <span class="case-visit-link">View Case Study <span>→</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRUSTED BY CLIENTS ═══════════════ -->
+  <section class="trusted-section section-pad" id="trusted-clients">
+    <div class="container">
+      <div class="trusted-header reveal">
+        <span class="trusted-label">Trusted by</span>
+        <h2 class="trusted-title">Industry Leaders</h2>
+        <p class="trusted-subtitle">We've partnered with forward-thinking brands to deliver exceptional digital experiences.</p>
+      </div>
+    </div>
+    <div class="trusted-marquee-wrap">
+      <div class="trusted-marquee-track">
+        <!-- ═══ LOGO SLOT 1 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 1</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 2 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 2</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 3 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 3</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 4 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 4</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 5 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 5</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 6 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 6</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 7 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 7</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 8 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 8</text>
+          </svg>
+        </div>
+        <!-- ═══ LOGO SLOT 9 ═══ -->
+        <div class="trusted-logo-item">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 9</text>
+          </svg>
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 1</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 2</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 3</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 4</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 5</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 6</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 7</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 8</text></svg>
+        </div>
+        <div class="trusted-logo-item" aria-hidden="true">
+          <svg class="trusted-logo-svg trusted-logo-placeholder" viewBox="0 0 160 45" fill="none"><rect x="1" y="1" width="158" height="43" rx="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="monospace" font-size="9" fill="currentColor" opacity="0.45">Logo 9</text></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="site-footer">
+    <div class="lamp" id="footer-lamp">
+      <div class="lamp__glow"></div>
+      <div class="lamp__line"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-cta-strip">
+        <div class="container footer-cta-inner">
+          <p class="footer-cta-text">Ready to grow your brand?</p>
+          <a href="contact.html" class="footer-cta-btn">Let's Talk <span>→</span></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-about">
+            <div class="footer-logo"><img src="assets/logo.png" alt="Blink Beyond" class="footer-logo-img" width="160" height="38"></div>
+            <p class="footer-tagline">Where brands blink and boom. We craft digital experiences that drive real growth.</p>
+            <div class="footer-social-links">
+              <a href="https://instagram.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/blinkbeyond" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://facebook.com/blinkbeyond" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://wa.me/919545556009" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              </a>
+            </div>
+            <div class="footer-msme">
+              <img src="assets/msme-badge.svg" alt="MSME Registered Enterprise" class="footer-msme-logo" width="44" height="44">
+              <div class="footer-msme-info">
+                <span class="footer-msme-label">MSME Registered Enterprise</span>
+                <span class="footer-msme-gstin">GSTIN: 27AABCU1234A1Z5</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col footer-links-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col footer-services-col">
+            <h4 class="footer-col-title">Services</h4>
+            <a href="services.html">Social Media Marketing</a>
+            <a href="services.html">Performance Marketing</a>
+            <a href="services.html">Web Development</a>
+            <a href="services.html">UI/UX Design</a>
+            <a href="services.html">Content Creation</a>
+            <a href="services.html">Brand Strategy</a>
+          </div>
+          <div class="footer-col footer-contact-col">
+            <h4 class="footer-col-title">Get In Touch</h4>
+            <p><span class="footer-contact-label">Address</span>Palghar - 401404,<br>Mumbai-Maharashtra.</p>
+            <p><span class="footer-contact-label">Phone</span><a href="tel:+919545556009">+91 95455 56009</a></p>
+            <p><span class="footer-contact-label">Email</span><a href="mailto:support@blinkbeyond.co.in">support@blinkbeyond.co.in</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-brand-wrap" id="footer-brand-wrap">
+        <span class="footer-brand-text" aria-hidden="true">BLINK BEYOND</span>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 Blink Beyond. All rights reserved.</p>
+          <p class="footer-bottom-legal"><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/scrolltrigger.min.js"></script>
+  <script src="js/vendor/draggable.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Dynamic Case Filtering JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.case-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            if (filterValue === 'all' || cardCategory === filterValue) {
+              // Fade in and show card
+              gsap.killTweensOf(card);
+              gsap.to(card, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.4,
+                ease: 'power2.out',
+                clearProps: 'display',
+                onStart: () => {
+                  card.style.display = 'flex';
+                }
+              });
+            } else {
+              // Fade out and hide card
+              gsap.killTweensOf(card);
+              gsap.to(card, {
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => {
+                  card.style.display = 'none';
+                }
+              });
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
