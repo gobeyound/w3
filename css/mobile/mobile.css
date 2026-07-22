@@ -2,13 +2,43 @@
    MOBILE VIEW STYLES (<= 768px)
    ========================================================================== */
 
+/* Prevent horizontal scroll leakage on mobile viewports */
+@media (max-width: 768px) {
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+
 /* ========================================
    RESPONSIVE — MOBILE  ≤ 768px
    ======================================== */
 @media (max-width: 768px) {
   :root {
     --nav-height: 52px;
-    --container-px: 20px;
+    --container-px: 16px;
+  }
+
+  /* Fixed mobile navbar container */
+  .navbar {
+    position: fixed !important;
+    top: 10px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    z-index: 1000 !important;
+    transform: none !important;
+  }
+
+  .card-nav-top, .nav-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
   }
 
   /* Adjust hero text positioning on mobile: make it sit higher up */
@@ -39,7 +69,7 @@
   }
 
   .hero-headline {
-    font-size: clamp(32px, 9vw, 42px) !important;
+    font-size: clamp(30px, 8.5vw, 40px) !important;
     white-space: normal !important;
     flex-wrap: wrap !important;
     line-height: 1.15 !important;
@@ -49,13 +79,15 @@
   }
 
   /* ── Announcement strip: pill style on mobile ── */
-  .announcement-strip {
+  .announcement-strip, .bb-ticker-bar {
     position: relative !important;
-    width: 92vw !important;
-    max-width: 860px !important;
+    width: calc(100% - 32px) !important;
+    max-width: 360px !important;
     height: 32px !important;
-    margin: calc(15px + var(--nav-height) + 12px) auto 0 !important;
+    margin: calc(10px + var(--nav-height) + 8px) auto 0 !important;
     border-radius: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   /* Make header and button compact on mobile to prevent overlapping and look clean */
@@ -975,6 +1007,74 @@
    ======================================== */
 @media (max-width: 1024px) {
 
+  /* Home reel section clean flow on mobile */
+  #home-reel-section, .about-reel-section {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 48px 20px !important;
+    overflow: hidden !important;
+  }
+
+  #home-reel-section .about-reel-spacer {
+    display: none !important;
+  }
+
+  #home-reel-section .about-reel-inner {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    transform: none !important;
+    padding: 0 !important;
+  }
+
+  #home-reel-section .about-reel-text-wrap,
+  #home-reel-section .hero-inner-text {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  #home-reel-section .arc-hero-para {
+    font-size: clamp(15px, 4.2vw, 18px) !important;
+    line-height: 1.5 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    color: #0a0a0a !important;
+  }
+
+  #home-reel-section .about-video-wrap,
+  #home-reel-section .reel-video-container {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: 220px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  }
+
+  #home-reel-section .about-video-wrap iframe,
+  #home-reel-section .about-video-wrap video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+
   /* Each card sticks at top and the next slides over it */
   #section-blink,
   #section-build,
@@ -1009,9 +1109,10 @@
     transform: none !important;
     will-change: auto !important;
     transform-origin: unset !important;
-    padding: 48px 28px !important;
+    padding: 60px 20px 24px !important;
     background: transparent !important;
-    gap: 20px !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
   }
 
   /* Text block — centered */
@@ -1026,7 +1127,7 @@
     z-index: 2 !important;
   }
 
-  /* Word wrap — relative so labels sit top-left / bottom-right */
+  /* Word wrap — relative so labels sit neatly in stack */
   #section-blink .service-word-wrap,
   #section-build .service-word-wrap,
   #section-boom  .service-word-wrap {
@@ -1034,58 +1135,68 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 18px 24px 18px !important;
-    margin-bottom: 20px !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-bottom: 8px !important;
     overflow: visible !important;
+    width: 100% !important;
   }
 
-  /* Script labels — absolute, matching desktop positioning */
-  #section-blink .script-label.top-left,
-  #section-build .script-label.top-left,
-  #section-boom  .script-label.top-left {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    font-size: 17px !important;
+  /* Script labels — clean inline flow on mobile */
+  #section-blink .script-label,
+  #section-build .script-label,
+  #section-boom  .script-label {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    font-size: clamp(14px, 4vw, 17px) !important;
     order: unset !important;
-    align-self: unset !important;
-    margin: 0 !important;
+    align-self: center !important;
+    margin: 4px 0 !important;
     font-family: var(--font-script, cursive) !important;
+    text-align: center !important;
   }
 
-  #section-blink .script-label.bottom-right,
-  #section-build .script-label.bottom-right,
-  #section-boom  .script-label.bottom-right {
-    position: absolute !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    font-size: 17px !important;
-    order: unset !important;
-    align-self: unset !important;
-    margin: 0 !important;
-    font-family: var(--font-script, cursive) !important;
-  }
-
-  /* Big word — massive and centered */
+  /* Big word — responsive and centered */
   #section-blink .service-big-word,
   #section-build .service-big-word,
   #section-boom  .service-big-word {
     order: 1 !important;
-    font-size: clamp(88px, 30vw, 128px) !important;
-    letter-spacing: -4px !important;
-    line-height: 0.88 !important;
-    margin: 0 !important;
+    font-size: clamp(52px, 16vw, 96px) !important;
+    letter-spacing: -2px !important;
+    line-height: 0.95 !important;
+    margin: 4px 0 !important;
+    text-align: center !important;
   }
 
-  /* Description — centered, readable */
+  /* Description & Card — centered, readable, non-overlapping */
   #section-blink .service-word-desc,
   #section-build .service-word-desc,
   #section-boom  .service-word-desc {
-    font-size: 15px !important;
-    line-height: 1.7 !important;
-    max-width: 290px !important;
-    margin: 0 auto !important;
-    margin-top: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    max-width: 320px !important;
+    margin: 8px auto 0 !important;
+    text-align: center !important;
+  }
+
+  #section-blink .service-description-card,
+  #section-build .service-description-card,
+  #section-boom  .service-description-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 10px auto 0 !important;
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+    border-radius: 16px !important;
     text-align: center !important;
   }
 
