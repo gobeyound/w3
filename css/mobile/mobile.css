@@ -11,6 +11,13 @@
     --container-px: 20px;
   }
 
+  /* Robust mobile boundary constraints to prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   /* Adjust hero text positioning on mobile: make it sit higher up */
   .hero-text {
     padding-top: clamp(16px, 3.5vh, 40px) !important;
@@ -130,7 +137,108 @@
     display: none !important;
   }
 
-  /* ── Home reel section — mobile ── */
+  /* ── Home reel & About page video section — mobile ── */
+  .about-reel-section,
+  #home-reel-section {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 60px 0 !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+  }
+
+  .about-reel-spacer,
+  .home-reel-spacer {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  /* Compact video card styling inside anchor */
+  #home-card:not(.mobile-expanded),
+  #about-card:not(.mobile-expanded) {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    border-radius: 12px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+  }
+
+  /* Let iframe scale inside compact card */
+  #home-card:not(.mobile-expanded) .reel-grid,
+  #about-card:not(.mobile-expanded) .reel-grid {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+  }
+
+  #home-card:not(.mobile-expanded) .reel-grid iframe,
+  #about-card:not(.mobile-expanded) .reel-grid iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Fullscreen expanded state on mobile */
+  #home-card.mobile-expanded,
+  #about-card.mobile-expanded {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    z-index: 99999 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #000 !important;
+  }
+
+  #home-card.mobile-expanded .reel-grid,
+  #about-card.mobile-expanded .reel-grid {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+
+  #home-card.mobile-expanded .reel-grid iframe,
+  #about-card.mobile-expanded .reel-grid iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important;
+    height: 56.25vw !important;
+    min-width: 177.77vh !important;
+    min-height: 100vh !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  /* Hide immersive UI details if they overlap in compact mode */
+  .home-card-info {
+    opacity: 0.8 !important;
+  }
 
 
   /* ── Nav mobile ── */
