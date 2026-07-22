@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const docEl = document.documentElement;
     const getCookieSeen = () => /(?:^|; )bb_loader_seen=1/.test(document.cookie);
     const getSeenFlag = () => {
-      if (docEl.classList.contains('bb-loader-skip')) return true;
+      if (docEl.classList.contains('bb-loader-skip') || docEl.classList.contains('loader-skip')) return true;
       try {
         if (localStorage.getItem('bb_loader_seen') === '1') return true;
       } catch (e) {}
@@ -1814,96 +1814,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const isMobileDevice = window.innerWidth <= 768;
-
-  if (isMobileDevice) {
-    // ── MOBILE BEHAVIOR: Inline tap-to-expand ──
-    setTimeout(() => {
-      homeCard.style.opacity = '1';
-    }, 150);
-
-    const homePlayBtn = document.querySelector('.home-play-btn');
-    if (homePlayBtn) {
-      homePlayBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        homeCard.classList.add('mobile-expanded');
-        const homeFsUI = document.getElementById('home-fs-ui');
-        if (homeFsUI) homeFsUI.classList.add('show');
-        if (homePlayCircle) homePlayCircle.style.opacity = '0';
-        hideImmersiveUI();
-      });
-    }
-
-    const homeFsClose = document.getElementById('home-fs-close');
-    if (homeFsClose) {
-      homeFsClose.addEventListener('click', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        homeCard.classList.remove('mobile-expanded');
-        const homeFsUI = document.getElementById('home-fs-ui');
-        if (homeFsUI) homeFsUI.classList.remove('show');
-        if (homePlayCircle) homePlayCircle.style.opacity = '1';
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.create({
+      trigger: homeSection,
+      start: 'top top',
+      end: '+=900',
+      onUpdate: self => {
+        targetProg = self.progress;
+        if (!rafId) rafId = requestAnimationFrame(smoothStep);
+      },
+      onLeave: () => {
         showImmersiveUI();
-      });
-    }
-  } else {
-    // ── DESKTOP BEHAVIOR: Immersive Scroll-to-expand ──
-    if (typeof ScrollTrigger !== 'undefined') {
-      ScrollTrigger.create({
-        trigger: homeSection,
-        start: 'top top',
-        end: '+=900',
-        onUpdate: self => {
-          targetProg = self.progress;
-          if (!rafId) rafId = requestAnimationFrame(smoothStep);
-        },
-        onLeave: () => {
-          showImmersiveUI();
-        },
-        onLeaveBack: () => {
-          showImmersiveUI();
-        },
-        onEnter: () => {
-          if (isFS) hideImmersiveUI();
-        },
-        onEnterBack: () => {
-          if (isFS) hideImmersiveUI();
-        }
-      });
-    }
-
-    setTimeout(() => { 
-      homeCard.style.opacity = '1'; 
-      cacheHomeDimensions();
-      updateHomeCard(); 
-    }, 150);
-
-    window.addEventListener('resize', () => {
-      cacheHomeDimensions();
-      updateHomeCard();
+      },
+      onLeaveBack: () => {
+        showImmersiveUI();
+      },
+      onEnter: () => {
+        if (isFS) hideImmersiveUI();
+      },
+      onEnterBack: () => {
+        if (isFS) hideImmersiveUI();
+      }
     });
+  }
 
-    const homeFsClose = document.getElementById('home-fs-close');
-    if (homeFsClose) {
-      homeFsClose.addEventListener('click', () => {
-        homeSection.scrollIntoView({ behavior: 'smooth' });
-      });
-    }
+  setTimeout(() => { 
+    homeCard.style.opacity = '1'; 
+    cacheHomeDimensions();
+    updateHomeCard(); 
+  }, 150);
+  window.addEventListener('resize', () => {
+    cacheHomeDimensions();
+    updateHomeCard();
+  });
 
-    const homePlayBtn = document.querySelector('.home-play-btn');
-    if (homePlayBtn) {
-      homePlayBtn.addEventListener('mouseenter', () => {
-        if (scrollProg < 0.05) homeCard.style.transform = 'scale(1.04)';
-      });
-      homePlayBtn.addEventListener('mouseleave', () => {
-        if (scrollProg < 0.05) homeCard.style.transform = 'scale(1)';
-      });
-      // Scroll page smoothly to expand and play the video
-      homePlayBtn.addEventListener('click', () => {
-        const targetY = homeSection.getBoundingClientRect().top + window.scrollY + 600;
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-      });
-    }
+  const homeFsClose = document.getElementById('home-fs-close');
+  if (homeFsClose) {
+    homeFsClose.addEventListener('click', () => {
+      homeSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  const homePlayBtn = document.querySelector('.home-play-btn');
+  if (homePlayBtn) {
+    homePlayBtn.addEventListener('mouseenter', () => {
+      if (scrollProg < 0.05) homeCard.style.transform = 'scale(1.04)';
+    });
+    homePlayBtn.addEventListener('mouseleave', () => {
+      if (scrollProg < 0.05) homeCard.style.transform = 'scale(1)';
+    });
+    // Scroll page smoothly to expand and play the video
+    homePlayBtn.addEventListener('click', () => {
+      const targetY = homeSection.getBoundingClientRect().top + window.scrollY + 600;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
   }
 });
 
@@ -2062,96 +2026,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const isMobileDevice = window.innerWidth <= 768;
-
-  if (isMobileDevice) {
-    // ── MOBILE BEHAVIOR: Inline tap-to-expand ──
-    setTimeout(() => {
-      aboutCard.style.opacity = '1';
-    }, 150);
-
-    const aboutPlayBtn = document.querySelector('.about-play-btn');
-    if (aboutPlayBtn) {
-      aboutPlayBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        aboutCard.classList.add('mobile-expanded');
-        const aboutFsUI = document.getElementById('about-fs-ui');
-        if (aboutFsUI) aboutFsUI.classList.add('show');
-        if (aboutPlayCircle) aboutPlayCircle.style.opacity = '0';
-        hideImmersiveUI();
-      });
-    }
-
-    const aboutFsClose = document.getElementById('about-fs-close');
-    if (aboutFsClose) {
-      aboutFsClose.addEventListener('click', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        aboutCard.classList.remove('mobile-expanded');
-        const aboutFsUI = document.getElementById('about-fs-ui');
-        if (aboutFsUI) aboutFsUI.classList.remove('show');
-        if (aboutPlayCircle) aboutPlayCircle.style.opacity = '1';
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.create({
+      trigger: aboutSection,
+      start: 'top top',
+      end: '+=900',
+      onUpdate: self => {
+        targetProg = self.progress;
+        if (!rafId) rafId = requestAnimationFrame(smoothStep);
+      },
+      onLeave: () => {
         showImmersiveUI();
-      });
-    }
-  } else {
-    // ── DESKTOP BEHAVIOR: Immersive Scroll-to-expand ──
-    if (typeof ScrollTrigger !== 'undefined') {
-      ScrollTrigger.create({
-        trigger: aboutSection,
-        start: 'top top',
-        end: '+=900',
-        onUpdate: self => {
-          targetProg = self.progress;
-          if (!rafId) rafId = requestAnimationFrame(smoothStep);
-        },
-        onLeave: () => {
-          showImmersiveUI();
-        },
-        onLeaveBack: () => {
-          showImmersiveUI();
-        },
-        onEnter: () => {
-          if (isFS) hideImmersiveUI();
-        },
-        onEnterBack: () => {
-          if (isFS) hideImmersiveUI();
-        }
-      });
-    }
-
-    setTimeout(() => { 
-      aboutCard.style.opacity = '1'; 
-      cacheAboutDimensions();
-      updateAboutCard(); 
-    }, 150);
-
-    window.addEventListener('resize', () => {
-      cacheAboutDimensions();
-      updateAboutCard();
+      },
+      onLeaveBack: () => {
+        showImmersiveUI();
+      },
+      onEnter: () => {
+        if (isFS) hideImmersiveUI();
+      },
+      onEnterBack: () => {
+        if (isFS) hideImmersiveUI();
+      }
     });
+  }
 
-    const aboutFsClose = document.getElementById('about-fs-close');
-    if (aboutFsClose) {
-      aboutFsClose.addEventListener('click', () => {
-        aboutSection.scrollIntoView({ behavior: 'smooth' });
-      });
-    }
+  setTimeout(() => { 
+    aboutCard.style.opacity = '1'; 
+    cacheAboutDimensions();
+    updateAboutCard(); 
+  }, 150);
+  window.addEventListener('resize', () => {
+    cacheAboutDimensions();
+    updateAboutCard();
+  });
 
-    const aboutPlayBtn = document.querySelector('.about-play-btn');
-    if (aboutPlayBtn) {
-      aboutPlayBtn.addEventListener('mouseenter', () => {
-        if (scrollProg < 0.05) aboutCard.style.transform = 'scale(1.04)';
-      });
-      aboutPlayBtn.addEventListener('mouseleave', () => {
-        if (scrollProg < 0.05) aboutCard.style.transform = 'scale(1)';
-      });
-      // Scroll page smoothly to expand and play the video
-      aboutPlayBtn.addEventListener('click', () => {
-        const targetY = aboutSection.getBoundingClientRect().top + window.scrollY + 600;
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-      });
-    }
+  const aboutFsClose = document.getElementById('about-fs-close');
+  if (aboutFsClose) {
+    aboutFsClose.addEventListener('click', () => {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  const aboutPlayBtn = document.querySelector('.about-play-btn');
+  if (aboutPlayBtn) {
+    aboutPlayBtn.addEventListener('mouseenter', () => {
+      if (scrollProg < 0.05) aboutCard.style.transform = 'scale(1.04)';
+    });
+    aboutPlayBtn.addEventListener('mouseleave', () => {
+      if (scrollProg < 0.05) aboutCard.style.transform = 'scale(1)';
+    });
+    // Scroll page smoothly to expand and play the video
+    aboutPlayBtn.addEventListener('click', () => {
+      const targetY = aboutSection.getBoundingClientRect().top + window.scrollY + 600;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
   }
 
   // navbar element reference (used to hide during immersive video)
